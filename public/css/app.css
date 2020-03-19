@@ -1,5 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+body {
+  background-image: url("https://www.graphicsbeam.com/wp-content/uploads/2013/03/Dusty-Wood.jpg");
+}
+
+body nav.navbar {
+  border-radius: 0px 0px 15px 15px;
+  height: 60px;
+  background-color: #fcf7f8 !important;
+  border-bottom-width: 7px;
+  border-bottom-color: #afdedc;
+  box-sizing: border-box;
+}
+
+body main div.container div.card input {
+  border: none;
+}
+
+body main div.container div.card text-area {
+  min-width: 80%;
+  min-height: 50px;
+  background-color: #fcf7f8;
+}
+
+body main div.container div.card div.card-header {
+  box-sizing: border-box;
+  border-bottom-color: #afdedc;
+  border-bottom-width: 3px;
+  border-bottom-style: ridge;
+  -webkit-animation: 2s;
+          animation: 2s;
+}
+
+body main div.container div.card:hover div.card-header {
+  border-bottom-color: #c4d7f2;
+  border-bottom-width: 7px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

@@ -22,6 +22,7 @@ window.EventBus = new Vue();
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('posts', require('./components/PostsComponent.vue').default);
 Vue.component('post-form', require('./components/PostFormComponent.vue').default);
+Vue.component('post', require('./components/PostComponent.vue').default);
 
 
 /**

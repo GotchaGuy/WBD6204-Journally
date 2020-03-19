@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//https://laracasts.com/series/how-to-be-awesome-in-phpstorm
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -22,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')->get('posts', 'ApiPostsController@index');
-Route::middleware('auth:api')->post('post-form', 'PostFormController@store');
 Route::middleware('auth:api')->post('posts', 'ApiPostsController@store');
+Route::middleware('auth:api')->get('post', 'ApiPostsController@show');

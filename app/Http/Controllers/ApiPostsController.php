@@ -21,4 +21,10 @@ class ApiPostsController extends Controller
 
         return $post;
     }
+
+    public function show()
+    {
+        
+    }
+    
 }
