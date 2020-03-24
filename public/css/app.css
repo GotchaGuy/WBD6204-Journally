@@ -26,8 +26,7 @@ body main div.container div.card text-area {
 body main div.container div.card div.card-header {
   box-sizing: border-box;
   border-bottom-color: #afdedc;
-  border-bottom-width: 3px;
-  border-bottom-style: ridge;
+  border-bottom-width: 7px;
   -webkit-animation: 2s;
           animation: 2s;
 }

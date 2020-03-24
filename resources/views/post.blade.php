@@ -3,4 +3,6 @@
 @section('content')
 
 
-    <post></post>
+    <post data-post="{{json_encode($post)}}"></post>
+
+    @endsection

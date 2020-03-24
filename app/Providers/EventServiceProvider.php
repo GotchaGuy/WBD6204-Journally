@@ -6,6 +6,9 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use App\Events\PostCreated;
+use App\Listeners\SendEmailToAuthor;
+use App\Listeners\LogPost;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        PostCreated::class => [
+            SendEmailToAuthor::class, LogPost::class,
+        ]
     ];
 
     /**

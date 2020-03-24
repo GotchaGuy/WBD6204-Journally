@@ -17,14 +17,14 @@
 
 <script>
     export default {
-        props: [],
+        props: ["dataPost"],
         data() {
             return {
-
+                post: {}
             }
         },
         mounted() {
-
+            this.post = JSON.parse(this.dataPost);
         },
 
     }

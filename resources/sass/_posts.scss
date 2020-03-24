@@ -26,13 +26,14 @@ body {
         div.card-header {
           box-sizing: border-box;
           border-bottom-color: #afdedc;
-          border-bottom-width: 3px;
-          border-bottom-style: ridge;
+          border-bottom-width: 7px;
+          //border-bottom-style: ridge;
           animation: 2s;
         }
 
       }
       div.card:hover div.card-header {
+        //background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
          border-bottom-color: #c4d7f2;
           border-bottom-width: 7px;
       }

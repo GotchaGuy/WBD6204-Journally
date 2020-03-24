@@ -26,6 +26,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('posts', require('./components/PostsComponent.vue').default);
 Vue.component('post-form', require('./components/PostFormComponent.vue').default);
 Vue.component('post', require('./components/PostComponent.vue').default);
+Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
 
 
 /**
