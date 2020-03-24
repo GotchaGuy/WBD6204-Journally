@@ -11,6 +11,13 @@ window.EventBus = new Vue();
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import Antd from 'ant-design-vue';
+// import App from './App';
+import 'ant-design-vue/dist/antd.css';
+Vue.config.productionTip = false;
+
+Vue.use(Antd);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -27,6 +34,7 @@ Vue.component('posts', require('./components/PostsComponent.vue').default);
 Vue.component('post-form', require('./components/PostFormComponent.vue').default);
 Vue.component('post', require('./components/PostComponent.vue').default);
 Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
+Vue.component('calendar', require('./components/CalendarComponent.vue').default);
 
 
 /**

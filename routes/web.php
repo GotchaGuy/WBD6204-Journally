@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
 Route::middleware('auth')->get('/posts/{id}', 'PostsController@show')->name('posts');
+Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/', function () {
     return view('welcome');
 });

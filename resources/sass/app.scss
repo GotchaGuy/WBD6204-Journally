@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
+//@import 'general'; ---- make this
 @import 'variables';
 @import 'posts';
+@import 'calendar';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

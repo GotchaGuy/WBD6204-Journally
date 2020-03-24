@@ -1,21 +1,14 @@
 <template>
     <div>
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1">Notes</el-menu-item>
             <el-submenu index="2">
-                <template slot="title">Calendar</template>
-                <el-menu-item index="2-1">item one</el-menu-item>
-                <el-menu-item index="2-2">item two</el-menu-item>
-                <el-menu-item index="2-3">item three</el-menu-item>
-                <el-submenu index="2-4">
-                    <template slot="title">Favorites</template>
-                    <el-menu-item index="2-4-1">item one</el-menu-item>
-                    <el-menu-item index="2-4-2">item two</el-menu-item>
-                    <el-menu-item index="2-4-3">item three</el-menu-item>
-                </el-submenu>
+                <template slot="title"><a href="\home" >Notes</a></template>
+                <el-menu-item index="1-1">categ one</el-menu-item>
+                <el-menu-item index="1-2">categ two</el-menu-item>
+                <el-menu-item index="1-3">categ three</el-menu-item>
             </el-submenu>
-            <el-menu-item index="3" disabled>Info</el-menu-item>
-            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
+                 <el-menu-item index="2"><a href="\calendar" target="_blank">Calendar</a></el-menu-item>
+                <el-menu-item index="3"><a href="\favorites" target="_blank">Favorites</a></el-menu-item>
         </el-menu>
 
     </div>
