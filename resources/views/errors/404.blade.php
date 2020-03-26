@@ -5,16 +5,16 @@
 
         <div class="jumbotron row">
             <div class="col-md-6">
-            <h1 class="display-2"> 404Error!</h1>
-            <p class="lead">Page not found. Sorry about that.</p>
+                <h1 class="display-1"> Dear 404,</h1>
+                <p class="lead">this is an Error! Sorry about that.</p>
+                <p>Sincerely,</p>
+                <p>The Journally Team</p>
             </div>
             <div class="col-md-6 img">
-                <img class="img-fluid rounded" src="/images/PNG404clear.png" alt="">
+                <img class="img-fluid rounded" src="/images/PNG404clear.png" alt="error_404_image">
             </div>
             <hr class="my-4">
-            <p>Return home?</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">NOTES</a>
+                <a class="btn btn-primary btn-lg mt-3 align-bottom-right" href="/home" role="button">NOTES</a>
             </p>
         </div>
 

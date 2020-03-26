@@ -10951,11 +10951,7 @@ body div.card.post {
   min-height: 350px;
 }
 
-body div.col-md-6 {
-  height: 60%;
-}
-
-body div.col-md-6 img {
-  height: 40%;
+body div.jumbotron div.col-md-6 {
+  height: 250px;
 }
 
