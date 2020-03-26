@@ -1,74 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
-body {
-  background-image: url("https://www.graphicsbeam.com/wp-content/uploads/2013/03/Dusty-Wood.jpg");
-}
-
-body nav.navbar {
-  border-radius: 0px 0px 15px 15px;
-  height: 60px;
-  background-color: #fcf7f8 !important;
-  border-bottom-width: 7px;
-  border-bottom-color: #afdedc;
-  box-sizing: border-box;
-}
-
-body main div.container div.card input {
-  border: none;
-}
-
-body main div.container div.card text-area {
-  min-width: 80%;
-  min-height: 50px;
-  background-color: #fcf7f8;
-}
-
-body main div.container div.card div.card-header {
-  box-sizing: border-box;
-  border-bottom-color: #afdedc;
-  border-bottom-width: 7px;
-  -webkit-animation: 2s;
-          animation: 2s;
-}
-
-body main div.container div.card:hover div.card-header {
-  border-bottom-color: #c4d7f2;
-  border-bottom-width: 7px;
-}
-
-body div.ant-fullcalendar-fullscreen {
-  background: linear-gradient(#91a8a4, #afdedc);
-}
-
-body div.ant-fullcalendar-fullscreen .notes-month {
-  text-align: center;
-  font-size: 28px;
-}
-
-body div.ant-fullcalendar-fullscreen .notes-month .notes-month section {
-  font-size: 28px;
-}
-
-body div.ant-fullcalendar-fullscreen .events {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-body div.ant-fullcalendar-fullscreen .events .events .ant-badge-status {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  text-overflow: ellipsis;
-  font-size: 12px;
-}
-
-body div.ant-fullcalendar-fullscreen div.ant-fullcalendar-date {
-  border-radius: 15px;
-  -webkit-animation: 2s;
-          animation: 2s;
-}
-
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10949,5 +10880,82 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background-image: url("/images/dusty-Wood.jpg");
+}
+
+body nav.navbar {
+  border-radius: 0px 0px 15px 15px;
+  height: 60px;
+  background-color: #fcf7f8 !important;
+  border-bottom-width: 7px;
+  border-bottom-color: #afdedc;
+  box-sizing: border-box;
+}
+
+body main div.container div.card input {
+  border: none;
+}
+
+body main div.container div.card text-area {
+  min-width: 80%;
+  min-height: 50px;
+  background-color: #fcf7f8;
+}
+
+body main div.container div.card div.card-header {
+  box-sizing: border-box;
+  border-bottom-color: #afdedc;
+  border-bottom-width: 7px;
+  -webkit-animation: 2s;
+          animation: 2s;
+}
+
+body main div.container div.card:hover div.card-header {
+  border-bottom-color: #c4d7f2;
+  border-bottom-width: 7px;
+}
+
+body div.ant-fullcalendar-fullscreen .notes-month {
+  text-align: center;
+  font-size: 28px;
+}
+
+body div.ant-fullcalendar-fullscreen .notes-month .notes-month section {
+  font-size: 28px;
+}
+
+body div.ant-fullcalendar-fullscreen .events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body div.ant-fullcalendar-fullscreen .events .events .ant-badge-status {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+body div.ant-fullcalendar-fullscreen div.ant-fullcalendar-date {
+  border-radius: 15px;
+  -webkit-animation: 2s;
+          animation: 2s;
+}
+
+body div.card.post {
+  min-height: 350px;
+}
+
+body div.col-md-6 {
+  height: 60%;
+}
+
+body div.col-md-6 img {
+  height: 40%;
 }
 

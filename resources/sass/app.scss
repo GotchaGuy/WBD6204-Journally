@@ -4,8 +4,13 @@
 // Variables
 //@import 'general'; ---- make this
 @import 'variables';
-@import 'posts';
-@import 'calendar';
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// scss
+@import 'posts';
+@import 'calendar';
+@import 'post';
+@import '404error';

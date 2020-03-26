@@ -31,8 +31,9 @@ Vue.use(Antd);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('posts', require('./components/PostsComponent.vue').default);
-Vue.component('post-form', require('./components/PostFormComponent.vue').default);
 Vue.component('post', require('./components/PostComponent.vue').default);
+Vue.component('post-form', require('./components/PostFormComponent.vue').default);
+Vue.component('post-edit', require('./components/PostEditComponent.vue').default);
 Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
 Vue.component('calendar', require('./components/CalendarComponent.vue').default);
 
