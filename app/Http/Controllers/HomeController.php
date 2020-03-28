@@ -26,7 +26,6 @@ class HomeController extends Controller
     {
 
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
-
         return view('home', compact('posts'));
     }
 }

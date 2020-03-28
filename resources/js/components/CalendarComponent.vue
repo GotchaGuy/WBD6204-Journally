@@ -2,18 +2,22 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="card">
-                <a-calendar>
-                    <ul class="events" slot="dateCellRender" slot-scope="value">
-                        <li v-for="item in getListData(value)" :key="item.content">
-                            <a-badge :status="item.type" :text="item.content"/>
-                        </li>
-                    </ul>
-                    <template slot="monthCellRender" slot-scope="value">
-                        <div v-if="getMonthData(value)" class="notes-month">
-                            <section>{{getMonthData(value)}}</section>
-                            <span>Backlog number</span>
-                        </div>
-                    </template>
+                <!--                <a-calendar>-->
+                <!--                    <ul class="events" slot="dateCellRender" slot-scope="value">-->
+                <!--                        <li v-for="item in getListData(value)" :key="item.content">-->
+                <!--                            <a-badge :status="item.type" :text="item.content"/>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <!--                    <template slot="monthCellRender" slot-scope="value">-->
+                <!--                        <div v-if="getMonthData(value)" class="notes-month">-->
+                <!--                            <section>{{getMonthData(value)}}</section>-->
+                <!--                            <span>Backlog number</span>-->
+                <!--                        </div>-->
+                <!--                    </template>-->
+                <!--                </a-calendar>-->
+                <a-calendar @panelChange="onPanelChange" @select="onSelect">
+                    <template slot="dateCellRender" slot-scope="value"></template>
+                    <template slot="monthCellRender" slot-scope="value"></template>
                 </a-calendar>
             </div>
         </div>

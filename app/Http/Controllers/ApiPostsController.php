@@ -6,12 +6,18 @@ use App\Events\PostCreated;
 use App\Mail\PostPublished;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ApiPostsController extends Controller
 {
     public function index()
     {
-        return Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
+        $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
+//        foreach($posts as $key => $post) {
+//            $posts[$key]->body = \Str::limit($post->body, '120') . "..";
+//        }
+
+        return $posts;
     }
 
     public function store(Request $request)

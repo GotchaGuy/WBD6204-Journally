@@ -10882,6 +10882,20 @@ a.text-dark:focus {
   }
 }
 
+.dropdown > .dropdown-menu {
+  top: 200%;
+  transition: 0.3s all ease-in-out;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  top: 100%;
+}
+
+.dropdown > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
 body {
   background-image: url("/images/dusty-Wood.jpg");
 }
