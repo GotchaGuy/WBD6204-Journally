@@ -3,6 +3,6 @@
 @section('content')
 
 
-    <calendar></calendar>
+    <calendar data-post="{{json_encode($grouped)}}></calendar>
 
     @endsection
