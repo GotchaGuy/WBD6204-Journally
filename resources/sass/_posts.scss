@@ -1,43 +1,73 @@
 
 body {
   //background-image: url("https://www.graphicsbeam.com/wp-content/uploads/2013/03/Dusty-Wood.jpg");
-    background-image: url("/images/dusty-Wood.jpg");
-
-  nav.navbar {
-    border-radius: 0px 0px 15px 15px;
-    height: 60px;
-    background-color: #fcf7f8 !important;
-    border-bottom-width: 7px;
-    border-bottom-color: #afdedc;
-    box-sizing: border-box;
-  }
 
   main {
     div.container {
-      div.card {
+      a {
+        text-decoration: inherit;
+        color: #000;
 
-        input {
-        border: none;
-        }
-        text-area {
-          min-width: 80%;
-          min-height: 50px;
-          background-color: #fcf7f8;
-        }
-        div.card-header {
-          box-sizing: border-box;
-          border-bottom-color: #afdedc;
-          border-bottom-width: 7px;
-          //border-bottom-style: ridge;
-          animation: 2s;
-        }
+        div.card {
+          min-height: 200px;
+          width: 100%;
 
+          input {
+            border: none;
+          }
+
+          div.card-header {
+            box-sizing: border-box;
+            border-bottom-color: #afdedc;
+            border-bottom-width: 7px;
+            animation: 2s;
+          }
+
+          div.card-body {
+
+            textarea#body {
+              min-width: 80%;
+              min-height: 80px;
+              max-height: 200px;
+              background-color: #fcf7f8;
+            }
+          }
+
+        }
       }
-      div.card:hover div.card-header {
-        //background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
-         border-bottom-color: #c4d7f2;
-          border-bottom-width: 7px;
+
+      /* Underline From Left */
+      .hvr-underline-from-left {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        overflow: hidden;
       }
+
+      .hvr-underline-from-left:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $old;
+        height: 4px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+
+      .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+        right: 0;
+      }
+
     }
 
   }

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-//@import 'general'; ---- make this
+@import 'general';
 @import 'variables';
 
 
@@ -11,6 +11,7 @@
 
 // scss
 @import "nav";
+@import "login";
 @import 'posts';
 @import 'calendar';
 @import 'post';

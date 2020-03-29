@@ -10,39 +10,43 @@ class CalendarController extends Controller
 {
     public function index()
     {
-        function monthYear($var) {
-          return date("F Y", time($var));
+        function monthYear($var)
+        {
+            return date("F Y", time($var));
         }
-         function day($var) {
-          return date("j", time($var));
+
+        function day($var)
+        {
+            return date("j", time($var));
         }
 
 
         $events = Event::with('user', 'status')->orderBy('created_at', 'desc')->get();
-//        dd(json_encode($events, JSON_PRETTY_PRINT));
-        $dates = $events->groupBy(function ($item, $key) {
-//            dd(json_encode($item, JSON_PRETTY_PRINT));
-            return $item->date;
-            //treats the name string as an array
-        })
-            ->sortBy(function ($item, $key) {      //sorts A-Z at the top level
-                return $key;
-            });
+        $grouped = $events;
+//        $dates = $events->groupBy(function ($item, $key) {
+//            return $item->date;
+//            //treats the name string as an array
+//        })
+//            ->sortBy(function ($item, $key) {      //sorts A-Z at the top level
+//                return $key;
+//            });
+//  dd(json_encode($dates, JSON_PRETTY_PRINT));
+//
+//        $grouped = array();
+//        foreach ($events as $event) {
+//            if(!isset($grouped[monthYear($event->date)])) {
+//                $grouped[monthYear($event->date)][day($event->date)] = $event;
+//            }
+//            $grouped[] = monthYear($event->date);
+//        }
 
-        $ordered = array();
-        foreach ($dates as $key => $date) {
-            $key = monthYear($key);
-            $ordered[$key] = $key;
-            foreach ($date as $eventData) {
-                if (monthYear($eventData->date) == monthYear($key)) {
-                    $ordered[$key][day($eventData->date)] = $eventData;
-                }
-            }
-        }
-            dd(json_encode($ordered, JSON_PRETTY_PRINT));
-
-
-
+//        $events1 = $events;
+//        foreach ($events1 as $event1) {
+//            $event1->date = monthYear($event1->date);
+//        }
+//        $grouped = $events1->groupBy(function ($item, $key) {
+//            return $item->date;
+//        });
 //        dd(json_encode($grouped, JSON_PRETTY_PRINT));
 
         return view('calendar', compact('grouped'));

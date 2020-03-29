@@ -12,6 +12,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+        Category::create(['title' => 'Uncategorized']);
         Category::create(['title' => 'SAE Notes']);
         Category::create(['title' => 'Thoughts']);
         Category::create(['title' => 'Travel']);

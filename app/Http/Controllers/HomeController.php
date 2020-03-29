@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,8 @@ class HomeController extends Controller
     {
 
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
-        return view('home', compact('posts'));
+        $categories = Category::all();
+
+        return view('home', compact('posts', 'categories'));
     }
 }

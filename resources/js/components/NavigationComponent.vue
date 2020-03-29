@@ -11,8 +11,8 @@
         <!--                <el-menu-item index="3"><a href="\favorites" >Favorites</a></el-menu-item>-->
         <!--&lt;!&ndash;            target="_blank"&ndash;&gt;-->
         <!--        </el-menu>-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-             <img src="/images/dusty-Wood.jpg" width="30" height="30" alt="logo">
+        <nav class="navbar navbar-expand-lg sm-4 navbar-light bg-light">
+             <img src="/images/logo.PNG" width="30" height="30" alt="logo">
             <a class="navbar-brand ml-3" href="\home">Journally</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

@@ -3,14 +3,13 @@
 
 
         <div class="row justify-content-center" v-for="(post, index) in posts">
-            <div class="col-md-6 mb-2">
+            <div class="col-md-6 mb-3">
                 <a :href="'/posts/' + post.id">
-                    <div class="card">
-                        <div class="card-header"><strong>{{post.title}}</strong></div>
-                        <div class="card-body"
-                             :style="'background-image:url(' + post.image + ')'"
-                        >
-                            <div class="card-body">{{post.body}}</div>
+                    <div class="card hvr-underline-from-left md-4">
+<!--                        <img :src="post.image" alt="" class="card-img-top">-->
+                            <div class="card-header"><strong>{{post.title}}</strong></div>
+                        <div class="card-body">
+                            <div class="card-text">{{post.body}}</div>
                         </div>
                     </div>
                 </a>
