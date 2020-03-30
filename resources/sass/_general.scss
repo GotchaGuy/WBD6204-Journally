@@ -8,6 +8,16 @@ body {
     border-bottom-width: 7px;
     border-bottom-color: #afdedc;
     box-sizing: border-box;
+
+    div#navbarDropdownMenuLink {
+      //height: 100%;
+    a.nav-link {
+      box-sizing: border-box;
+      //padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    }
   }
 
 

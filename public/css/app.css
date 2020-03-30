@@ -13,6 +13,12 @@ body nav.navbar {
   box-sizing: border-box;
 }
 
+body nav.navbar div#navbarDropdownMenuLink a.nav-link {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
