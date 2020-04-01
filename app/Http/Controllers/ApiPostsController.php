@@ -13,9 +13,12 @@ class ApiPostsController extends Controller
     public function index()
     {
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
-//        foreach($posts as $key => $post) {
-//            $posts[$key]->body = \Str::limit($post->body, '120') . "..";
-//        }
+
+        foreach ($posts as $key => $post) {
+            $posts[$key]->body = \Str::limit($post->body, 40);
+            \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
+            dd($posts);
+        }
 
         return $posts;
     }
@@ -29,7 +32,6 @@ class ApiPostsController extends Controller
 //        \Mail::to('v.lelicanin@sae.edu')->send(new PostCreated($post));
         return $post;
     }
-
 
 
 }

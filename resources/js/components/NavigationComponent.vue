@@ -15,7 +15,7 @@
                             Notes
                         </a>
                         <div class="dropdown-menu mt-n1" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" v-for="category in categories" :href="'/home/' + category.title">{{category.title}}</a>
+                            <a class="dropdown-item" v-for="category in categories" :href="'/home/' + category.id">{{category.title}}</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -37,16 +37,18 @@
 
 <script>
     export default {
-        props: ['dataCategories'],
         data() {
             return {
                 activeIndex: '1',
                 activeIndex2: '1',
-                categories: ''
+                categories: {}
             }
         },
         mounted() {
-            this.categories = JSON.parse(this.dataCategories);
+            axios.get('/api/categories')
+            .then( (response)=> {
+                this.categories = response.data;
+            })
 
         },
         methods: {

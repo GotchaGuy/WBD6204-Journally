@@ -1,7 +1,14 @@
 body {
-div.jumbotron {
- div.col-md-6 {
-   height: 250px;
+div.card {
+
+ img.error {
+   width: 200px;
+   height: auto;
+   margin: 0 auto;
+
+   a.float-right {
+     color: $snow;
+   }
  }
 }
 

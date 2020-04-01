@@ -42,6 +42,7 @@ Vue.component('post-form', require('./components/PostFormComponent.vue').default
 Vue.component('post-edit', require('./components/PostEditComponent.vue').default);
 Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
 Vue.component('calendar', require('./components/CalendarComponent.vue').default);
+Vue.component('category', require('./components/CategoryComponent.vue').default);
 
 
 /**

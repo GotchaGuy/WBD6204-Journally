@@ -2,20 +2,16 @@
 
 @section('content')
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="card">
+                <img src="/images/PNG404clear.png" alt="404error" class="card-img-top error">
+                <div class="card-header"><strong>Dear 404,</strong></div>
+                <div class="card-body">
+                    <div class="card-text">you are not supposed to be here. Sorry about that.</div>
+                    <a class="btn btn-primary mt-3 float-right" href="/home" role="button">Notes</a>
+                </div>
 
-        <div class="jumbotron row">
-            <div class="col-md-6">
-                <h1 class="display-1"> Dear 404,</h1>
-                <p class="lead">this is an Error! Sorry about that.</p>
-                <p>Sincerely,</p>
-                <p>The Journally Team</p>
             </div>
-            <div class="col-md-6 img">
-                <img class="img-fluid rounded" src="/images/PNG404clear.png" alt="error_404_image">
-            </div>
-            <hr class="my-4">
-                <a class="btn btn-primary btn-lg mt-3 align-bottom-right" href="/home" role="button">NOTES</a>
-            </p>
         </div>
 
     </div>

@@ -11,9 +11,19 @@ body {
         div.card {
           min-height: 200px;
           width: 100%;
+          animation: 2s;
 
           input {
             border: none;
+          }
+
+          div.box {
+            height: 79px;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
           }
 
           div.card-header {
@@ -33,6 +43,10 @@ body {
             }
           }
 
+        }
+
+        div.card:hover img {
+          height: 158px;
         }
       }
 

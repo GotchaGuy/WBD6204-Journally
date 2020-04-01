@@ -6,10 +6,15 @@
             <div class="col-md-6 mb-3">
                 <a :href="'/posts/' + post.id">
                     <div class="card hvr-underline-from-left md-4">
-<!--                        <img :src="post.image" alt="" class="card-img-top">-->
-                            <div class="card-header"><strong>{{post.title}}</strong></div>
+                        <div v-if="post.image" class="box">
+                        <img :src="post.image" alt="notesImage" class="card-img-top">
+                        </div>
+                            <div class="card-header row">
+                               <div class="col"><strong>{{post.title}}</strong> | {{post.updated_at}}</div>
+                            <div class="col text-right">{{post.category.title}}</div>
+                            </div>
                         <div class="card-body">
-                            <div class="card-text">{{post.body}}</div>
+                            <div class="card-text">{{post.body}}..</div>
                         </div>
                     </div>
                 </a>

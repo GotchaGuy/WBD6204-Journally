@@ -11051,10 +11051,23 @@ body main div.container a {
 body main div.container a div.card {
   min-height: 200px;
   width: 100%;
+  -webkit-animation: 2s;
+          animation: 2s;
 }
 
 body main div.container a div.card input {
   border: none;
+}
+
+body main div.container a div.card div.box {
+  height: 79px;
+}
+
+body main div.container a div.card div.box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body main div.container a div.card div.card-header {
@@ -11070,6 +11083,10 @@ body main div.container a div.card div.card-body textarea#body {
   min-height: 80px;
   max-height: 200px;
   background-color: #fcf7f8;
+}
+
+body main div.container a div.card:hover img {
+  height: 158px;
 }
 
 body main div.container .hvr-underline-from-left {
@@ -11134,7 +11151,13 @@ body div.card.post {
   min-height: 350px;
 }
 
-body div.jumbotron div.col-md-6 {
-  height: 250px;
+body div.card img.error {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+body div.card img.error a.float-right {
+  color: #fcf7f8;
 }
 

@@ -13,6 +13,6 @@ class StatusesTableSeeder extends Seeder
     public function run()
     {
         Status::create(['title' => 'warning']);
-        Status::create(['title' => 'usual']);
+        Status::create(['title' => 'success']);
     }
 }
