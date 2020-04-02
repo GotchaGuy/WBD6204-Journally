@@ -17,7 +17,6 @@ class ApiPostsController extends Controller
         foreach ($posts as $key => $post) {
             $posts[$key]->body = \Str::limit($post->body, 40);
             \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
-            dd($posts);
         }
 
         return $posts;
@@ -25,11 +24,12 @@ class ApiPostsController extends Controller
 
     public function store(Request $request)
     {
-        $request->merge(['user_id' => \Auth::user()->id, 'category_id' => 1]);
+        $request->merge(['user_id' => \Auth::user()->id]);
         $post = Post::create($request->all());
         event(new PostCreated($post));
 //        \Mail::to(\Auth::user()->email)->send(new PostCreated($post));
 //        \Mail::to('v.lelicanin@sae.edu')->send(new PostCreated($post));
+//        , 'category_id' => 1
         return $post;
     }
 

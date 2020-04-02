@@ -10,7 +10,7 @@
                         <img :src="post.image" alt="notesImage" class="card-img-top">
                         </div>
                             <div class="card-header row">
-                               <div class="col"><strong>{{post.title}}</strong> | {{post.updated_at}}</div>
+                               <div class="col"><strong>{{post.title}}</strong> | {{post.timestamp}}</div>
                             <div class="col text-right">{{post.category.title}}</div>
                             </div>
                         <div class="card-body">

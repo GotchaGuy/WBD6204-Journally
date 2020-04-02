@@ -12,9 +12,9 @@
                             </div>
                             <div class="col">
                                 <select name="category" id="category" class="form-control"
-                                        v-model="post.category">
+                                        v-model="post.category_id">
 <!--                                    <option value="" selected disabled hidden>Note Category here...</option>-->
-                                    <option v-for="category in categories" v-bind:value="category.value">
+                                    <option v-for="category in categories" v-bind:value="category.id">
                                         {{category.title}}
                                     </option>
                                 </select>
