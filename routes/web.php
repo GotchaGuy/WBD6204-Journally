@@ -25,7 +25,7 @@ Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('c
 Route::middleware('auth')->get('/home/{id}', 'CategoriesController@show')->name('categories');
 
 Route::get('/', function () {
-    return view('');
+    return view('welcome');
 });
 
 Auth::routes();

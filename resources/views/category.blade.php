@@ -3,5 +3,5 @@
 @section('content')
 
 
-    <category></category>
+    <category data-category="{{json_encode($category)}}"></category>
     @endsection
