@@ -15,7 +15,7 @@
                             Notes
                         </a>
                         <div class="dropdown-menu mt-n1" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" v-for="category in categories" :href="'/home/' + category.id">{{category.title}}</a>
+                            <a class="dropdown-item" v-for="category in categories" :href="'/home/categories/' + category.id">{{category.title}}</a>
                         </div>
                     </li>
                     <li class="nav-item">

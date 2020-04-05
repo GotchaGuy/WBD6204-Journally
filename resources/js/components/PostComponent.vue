@@ -3,17 +3,22 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
                 <div class="card pb-3 post">
-                    <div class="card-header"><strong>{{post.title}}</strong>
-                       <a :href="'/posts/' + post.id" tabindex="-1" role="button"
+                    <div class="card-header"><strong>{{post.title}}</strong>  | {{post.timestamp}}
+<!--                        | {{findCategTitle(post.category_id)}}-->
+
+                        <a :href="'/posts/' + post.id" tabindex="-1" role="button"
                            class=" btn btn-success float-right  ml-1 disabled " aria-disabled="true">Save</a>
                         <a :href="'/posts/' + post.id + '/edit'" role="button"
                            class=" btn btn-outline-primary float-right">Edit</a>
+                        <a :href="'/posts/' + post.id" role="button"
+                           class=" btn btn-outline-danger float-right mr-3">Delete</a>
 
                     </div>
-                    <div class="card-body"
-                         :style="'background-image:url(' + post.image + ')'"
-                    >
+                    <div class="card-body">
                         <div class="card-text">{{post.body}}</div>
+                         <div v-if="post.image" class="box mt-5">
+                            <img :src="post.image" alt="notesImage" class="card-img-top">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -23,15 +28,26 @@
 
 <script>
     export default {
-        props: ["dataPost"],
+        props: ["dataPost", "dataCategories"],
         data() {
             return {
-                post: {}
+                post: {},
+                categories: {}
             }
         },
         mounted() {
             this.post = JSON.parse(this.dataPost);
+            // console.log(this.post);
         },
+        methods: {
+            // findCategTitle($id) {
+            //     foreach(this.categories in this.category) {
+            //         if (this.post.category_id == this.category.id) {
+            //             return this.category.title;
+            //         }
+            //     }
+            // }
+        }
 
     }
 

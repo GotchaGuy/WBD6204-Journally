@@ -22,7 +22,7 @@ Route::middleware('auth')->put('/posts/{id}', 'PostsController@update')->name('p
 
 Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('calendar');
 
-Route::middleware('auth')->get('/home/{id}', 'CategoriesController@show')->name('categories');
+Route::middleware('auth')->get('/home/categories/{id}', 'CategoriesController@show')->name('categories');
 
 Route::get('/', function () {
     return view('welcome');

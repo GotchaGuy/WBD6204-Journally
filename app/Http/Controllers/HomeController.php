@@ -30,7 +30,7 @@ class HomeController extends Controller
         $categories = Category::all();
 
          foreach ($posts as $key => $post) {
-            $posts[$key]->body = \Str::limit($post->body, 40);
+            $posts[$key]->body = \Str::limit($post->body, 160);
             $posts[$key]->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         }
 //    dd($posts->toArray());

@@ -13,7 +13,7 @@
                             <div class="col">
                                 <select name="category" id="category" class="form-control"
                                         v-model="post.category_id">
-<!--                                    <option value="" selected disabled hidden>Note Category here...</option>-->
+                                    <option value="#" disabled hidden>Choose Category here...</option>
                                     <option v-for="category in categories" v-bind:value="category.id">
                                         {{category.title}}
                                     </option>

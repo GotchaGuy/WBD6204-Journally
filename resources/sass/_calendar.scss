@@ -1,7 +1,7 @@
 body {
 
   div.ant-fullcalendar-fullscreen {
-//background: linear-gradient(#91a8a4, #afdedc);
+    //background: linear-gradient(#91a8a4, #afdedc);
     .notes-month {
       text-align: center;
       font-size: 28px;
@@ -15,14 +15,23 @@ body {
       list-style: none;
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
 
-      .events .ant-badge-status {
-        overflow: hidden;
-        white-space: nowrap;
+      a {
+        height: 100%;
         width: 100%;
-        text-overflow: ellipsis;
-        font-size: 12px;
+        display: inline-block;
+
+        .events .ant-badge-status {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          text-overflow: ellipsis;
+          font-size: 12px;
+        }
       }
+
     }
 
     div.ant-fullcalendar-date {
@@ -32,6 +41,7 @@ body {
       border-radius: 15px;
       animation: 2s;
     }
+
 
   }
 

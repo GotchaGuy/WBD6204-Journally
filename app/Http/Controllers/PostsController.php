@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,8 @@ class PostsController extends Controller
     {
 
        $post =  Post::find($id);
-
-         return view("post", compact("post"));
+        $categories = Category::all();
+         return view("post", compact("post", 'categories'));
     }
 
      public function edit($id)

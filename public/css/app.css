@@ -11131,9 +11131,17 @@ body div.ant-fullcalendar-fullscreen .events {
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-body div.ant-fullcalendar-fullscreen .events .events .ant-badge-status {
+body div.ant-fullcalendar-fullscreen .events a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+body div.ant-fullcalendar-fullscreen .events a .events .ant-badge-status {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
