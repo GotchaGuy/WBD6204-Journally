@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
                 <div class="card">
@@ -33,8 +34,6 @@
                             <el-dialog :visible.sync="dialogVisible">
                                 <img width="100%" :src="dialogImageUrl" alt="">
                             </el-dialog>
-
-                            <!--                                <label for="body">Content</label>-->
                             <textarea class="card-text form-control mt-3" name="body" v-model="post.body" id="body"
                                       placeholder="Your thoughts here..."></textarea>
                         </div>
@@ -43,6 +42,9 @@
                         </button>
                     </form>
                 </div>
+
+                <div><a class="btn btn-primary mt-2" href="/categories">Add or Edit Categories</a></div>
+
             </div>
 
         </div>

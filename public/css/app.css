@@ -19,6 +19,13 @@ body nav.navbar div#navbarDropdownMenuLink a.nav-link {
   width: 100%;
 }
 
+body div.badge {
+  background-color: #fcf7f8;
+  border: 4px;
+  border-color: #c4d7f2;
+  font-size: 40px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11116,6 +11123,12 @@ body main div.container .hvr-underline-from-left:hover:before,
 body main div.container .hvr-underline-from-left:focus:before,
 body main div.container .hvr-underline-from-left:active:before {
   right: 0;
+}
+
+body div.ant-fullcalendar-fullscreen {
+  background-color: #fcf7f8;
+  border-top: 7px;
+  border-top-color: #c4d7f2;
 }
 
 body div.ant-fullcalendar-fullscreen .notes-month {

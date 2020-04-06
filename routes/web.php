@@ -22,7 +22,13 @@ Route::middleware('auth')->put('/posts/{id}', 'PostsController@update')->name('p
 
 Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('calendar');
 
-Route::middleware('auth')->get('/home/categories/{id}', 'CategoriesController@show')->name('categories');
+Route::middleware('auth')->get('home/categories/{id}', 'CategoriesController@show')->name('category-posts');
+Route::middleware('auth')->get('/categories', 'CategoriesController@index')->name('categories');
+Route::middleware('auth')->get('/categories/{id}/edit', 'CategoriesController@edit')->name('category-edit');
+Route::middleware('auth')->put('/categories/{id}', 'CategoriesController@update')->name('category-update');
+
+Route::middleware('auth')->get('/calendar/{id}/edit', 'EventsController@edit')->name('event-edit');
+Route::middleware('auth')->put('/calendar/{id}', 'EventsController@update')->name('event-update');
 
 Route::get('/', function () {
     return view('welcome');

@@ -2,6 +2,9 @@ body {
 
   div.ant-fullcalendar-fullscreen {
     //background: linear-gradient(#91a8a4, #afdedc);
+    background-color: $snow;
+    border-top: 7px;
+    border-top-color: $columbia;
     .notes-month {
       text-align: center;
       font-size: 28px;

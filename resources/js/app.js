@@ -44,6 +44,9 @@ Vue.component('el-nav', require('./components/NavigationComponent.vue').default)
 Vue.component('calendar', require('./components/CalendarComponent.vue').default);
 Vue.component('category', require('./components/CategoryComponent.vue').default);
 
+Vue.component('event-edit', require('./components/EventEditComponent.vue').default);
+Vue.component('category-edit', require('./components/CategoryEditComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

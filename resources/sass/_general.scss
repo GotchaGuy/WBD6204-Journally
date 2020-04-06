@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/dusty-Wood.jpg");
+  background-image: url("/images/dusty-Wood.jpg");
 
   nav.navbar {
     border-radius: 0px 0px 15px 15px;
@@ -11,14 +11,20 @@ body {
 
     div#navbarDropdownMenuLink {
       //height: 100%;
-    a.nav-link {
-      box-sizing: border-box;
-      //padding: 0;
-      height: 100%;
-      width: 100%;
-    }
+      a.nav-link {
+        box-sizing: border-box;
+        //padding: 0;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
+  div.badge {
+    background-color: $snow;
+    border: 4px;
+    border-color: $columbia;
+    font-size: 40px;
+  }
 
 }

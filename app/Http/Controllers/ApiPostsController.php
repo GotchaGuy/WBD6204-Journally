@@ -15,8 +15,8 @@ class ApiPostsController extends Controller
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
 
         foreach ($posts as $key => $post) {
-            $posts[$key]->body = \Str::limit($post->body, 40);
-            \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
+            $posts[$key]->body = \Str::limit($post->body, 160);
+            $posts[$key]->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         }
 
         return $posts;

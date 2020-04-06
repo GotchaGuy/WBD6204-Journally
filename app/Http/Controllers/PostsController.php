@@ -12,6 +12,7 @@ class PostsController extends Controller
     {
 
        $post =  Post::find($id);
+        $post->updated_at = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         $categories = Category::all();
          return view("post", compact("post", 'categories'));
     }
