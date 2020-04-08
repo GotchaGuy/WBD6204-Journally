@@ -14,7 +14,7 @@
                             <div class="col">
                                 <select name="category" id="category" class="form-control"
                                         v-model="post.category_id">
-                                    <option value="#" disabled hidden>Choose Category here...</option>
+                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}</option>
                                     <option v-for="category in categories" v-bind:value="category.id">
                                         {{category.title}}
                                     </option>
@@ -25,11 +25,18 @@
                             <!--                        <label for="image"></label>-->
                             <!--                        <input type="file" id="image" name="image"  alt="" v-model="post.image">-->
                             <el-upload
-                                    action="https://jsonplaceholder.typicode.com/posts/"
-                                    list-type="picture-card"
-                                    :on-preview="handlePictureCardPreview"
-                                    :on-remove="handleRemove">
-                                <i class="el-icon-plus"></i>
+                                    class="upload-demo"
+                                drag
+                                action="/api/image/upload"
+                                    :headers="headers"
+                                :on-success="handleUpload">
+                                <img v-if="post.image" :src="post.image" class="">
+                                <div v-else>
+                                    <i class="el-icon-upload"></i>
+                                    <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+                                    <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb
+                                    </div>
+                                </div>
                             </el-upload>
                             <el-dialog :visible.sync="dialogVisible">
                                 <img width="100%" :src="dialogImageUrl" alt="">
@@ -43,7 +50,7 @@
                     </form>
                 </div>
 
-                <div><a class="btn btn-primary mt-2" href="/categories">Add or Edit Categories</a></div>
+                <div><a class="btn btn-primary mt-2 categ" href="/categories">Edit Categories</a></div>
 
             </div>
 
@@ -58,10 +65,14 @@
         props: ['dataCategories'],
         data() {
             return {
-                post: {},
+                post: {
+                    image: ''
+                },
                 dialogImageUrl: '',
                 dialogVisible: false,
                 categories: '',
+                headers: {'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content}
+
             }
         },
         mounted() {
@@ -75,14 +86,10 @@
                         EventBus.$emit('post-submitted', response.data);
                     })
             },
-            handleRemove(file, fileList) {
-                console.log(file, fileList);
+            handleUpload(result, file) {
+                console.log(result);
+                this.post.image = "/storage/" + result.name
             },
-            handlePictureCardPreview(file) {
-                this.dialogImageUrl = file.url;
-                console.log(this.dialogImageUrl);
-                this.dialogVisible = true;
-            }
         }
     }
 

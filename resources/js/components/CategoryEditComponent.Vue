@@ -2,32 +2,34 @@
     <div class="container">
         <!--category add-->
         <div class="row justify-content-center">
-            <div class="col-md-6 mb-2">
+            <div class="col-md-4 mb-2">
                 <div class="card">
                     <form>
                         <div class="card-header row">
                             <div class="col"><strong>Add a new Category</strong></div>
                         </div>
                         <div class="card-body">
-                            <input type="text" class="form-control" name="title" v-model="newCategory.title">
-                             <button type="button" class="btn btn-primary mb-3 mr-3 float-right" @click="submitPost()">Add
-                        </button>
+                            <input type="text" class="form-control mb-3" name="title" v-model="newCategory.title">
+                            <button type="button"
+                                    class="btn btn-primary
+                                    mb-3 mr-3 float-right"
+                                    @click="submitPost()">
+                                Add
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
 
-        <!--        category edit, delete, update-->
-        <div class="row justify-content-center" v-for="(category, index) in categories">
-            <div class="col-md-3 mb-3">
+            <!--        category edit, delete, update-->
+            <div class="col-md-3 mb-3" v-for="(category, index) in categories">
                 <div class="card hvr-underline-from-left md-4  float-left">
                     <div class="card-header row">
                         <div class="col"><strong>Category {{index}}</strong></div>
                     </div>
                     <div class="card-body">
                         <form>
-                            <input type="text" class="form-control" name="title" :placeholder="category.title">
+                            <textarea type="text" class="form-control mb-3" name="title">{{category.title}}</textarea>
                             <a :href="'/categories/' + category.id" role="button"
                                class=" btn btn-outline-success float-right  ml-1 mb-2">Save</a>
                             <a :href="'/categories/' + category.id" role="button"
@@ -37,16 +39,22 @@
                 </div>
             </div>
 
+
         </div>
 
     </div>
 </template>
 
 <script>
+    import ATextarea from "ant-design-vue/es/input/TextArea";
+
     export default {
+        components: {ATextarea},
         data() {
             return {
-                newCategory: {},
+                newCategory: {
+                    title: ''
+                },
                 categories: {}
             }
         },

@@ -11,22 +11,33 @@ class PostsController extends Controller
     public function show($id)
     {
 
-       $post =  Post::find($id);
-        $post->updated_at = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
+        $post = Post::find($id);
+        $post->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         $categories = Category::all();
-         return view("post", compact("post", 'categories'));
+        return view("post", compact("post", 'categories'));
     }
 
-     public function edit($id)
+    public function edit($id)
     {
 
- $post =  Post::find($id);
+        $post = Post::find($id);
 
-         return view("post-edit", compact("post"));
+        return view("post-edit", compact("post"));
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
+        Post::where('id', $id)->update($request->all());
+
+        return redirect('/home');
+    }
+
+    public function delete($id)
+    {
+        Post::where('id', $id)->destroy();
+
+        return redirect('/home');
 
     }
+
 }

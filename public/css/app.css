@@ -11125,6 +11125,10 @@ body main div.container .hvr-underline-from-left:active:before {
   right: 0;
 }
 
+body main div.container .categ {
+  color: #fcf7f8;
+}
+
 body div.ant-fullcalendar-fullscreen {
   background-color: #fcf7f8;
   border-top: 7px;
@@ -11146,6 +11150,7 @@ body div.ant-fullcalendar-fullscreen .events {
   padding: 0;
   height: 100%;
   width: 100%;
+  /* Bounce To Right */
 }
 
 body div.ant-fullcalendar-fullscreen .events a {
@@ -11160,6 +11165,48 @@ body div.ant-fullcalendar-fullscreen .events a .events .ant-badge-status {
   width: 100%;
   text-overflow: ellipsis;
   font-size: 12px;
+}
+
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+  padding: 5px;
+}
+
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #afdedc;
+  color: #fcf7f8;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  border-radius: 10px;
+}
+
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:hover,
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:focus,
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:active {
+  color: #fcf7f8;
+}
+
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:hover:before,
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:focus:before,
+body div.ant-fullcalendar-fullscreen .events .hvr-bounce-to-right:active:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
 body div.ant-fullcalendar-fullscreen div.ant-fullcalendar-date {

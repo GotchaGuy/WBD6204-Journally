@@ -5,7 +5,7 @@
                 <a-calendar>
                     <ul class="events" slot="dateCellRender" slot-scope="value">
                         <li v-for="item in getListData(value)" :key="item.content">
-                        <a :href="'/calendar/' + item.id + '/edit'">
+                        <a :href="'/calendar/' + item.id + '/edit'"class="hvr-bounce-to-right info">
                             <a-badge :status="item.type" :text="item.content"/>
                         </a>
                         </li>

@@ -26,3 +26,7 @@ Route::middleware('auth:api')->post('posts', 'ApiPostsController@store');
 Route::middleware('auth:api')->get('categories', 'ApiCategoriesController@index');
 
 Route::middleware('auth:api')->get('events', 'ApiCalendarController@index');
+Route::middleware('auth:api')->get('statuses', 'ApiStatusesController@index');
+
+Route::middleware('auth:api')->post('/image/upload', 'ApiImageUploadController@uploadImage');
+
