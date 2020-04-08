@@ -14,7 +14,8 @@
                             <div class="col">
                                 <select name="category" id="category" class="form-control"
                                         v-model="post.category_id">
-                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}</option>
+                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}
+                                    </option>
                                     <option v-for="category in categories" v-bind:value="category.id">
                                         {{category.title}}
                                     </option>
@@ -26,10 +27,10 @@
                             <!--                        <input type="file" id="image" name="image"  alt="" v-model="post.image">-->
                             <el-upload
                                     class="upload-demo"
-                                drag
-                                action="/api/image/upload"
+                                    drag
+                                    action="/api/image/upload"
                                     :headers="headers"
-                                :on-success="handleUpload">
+                                    :on-success="handleUpload">
                                 <img v-if="post.image" :src="post.image" class="">
                                 <div v-else>
                                     <i class="el-icon-upload"></i>

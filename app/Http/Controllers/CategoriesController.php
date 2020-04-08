@@ -28,18 +28,5 @@ class CategoriesController extends Controller
 //        return view("post-edit");
 //    }
 
-    public function update(Request $request, $id)
-    {
-        Category::where('id', $id)->update($request->all());
 
-        return redirect('/categories');
-    }
-
-    public function delete($id)
-    {
-        Category::where('id', $id)->destroy();
-
-        return redirect('/categories');
-
-    }
 }

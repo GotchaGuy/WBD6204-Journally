@@ -36,15 +36,20 @@ window.moment = require('moment');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
+
 Vue.component('posts', require('./components/PostsComponent.vue').default);
 Vue.component('post', require('./components/PostComponent.vue').default);
 Vue.component('post-form', require('./components/PostFormComponent.vue').default);
 Vue.component('post-edit', require('./components/PostEditComponent.vue').default);
-Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
+
 Vue.component('calendar', require('./components/CalendarComponent.vue').default);
 Vue.component('category', require('./components/CategoryComponent.vue').default);
 
+Vue.component('event-form', require('./components/EventFormComponent.vue').default);
 Vue.component('event-edit', require('./components/EventEditComponent.vue').default);
+
 Vue.component('category-edit', require('./components/CategoryEditComponent.vue').default);
 
 

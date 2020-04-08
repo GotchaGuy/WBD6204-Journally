@@ -24,6 +24,8 @@ Route::middleware('auth:api')->get('posts', 'ApiPostsController@index');
 Route::middleware('auth:api')->post('posts', 'ApiPostsController@store');
 
 Route::middleware('auth:api')->get('categories', 'ApiCategoriesController@index');
+Route::middleware('auth:api')->put('categories/{id}', 'ApiCategoriesController@update');
+Route::middleware('auth:api')->delete('categories/{id}', 'ApiCategoriesController@destroy');
 
 Route::middleware('auth:api')->get('events', 'ApiCalendarController@index');
 Route::middleware('auth:api')->get('statuses', 'ApiStatusesController@index');

@@ -6,7 +6,7 @@ body {
     div.container {
       a {
         text-decoration: inherit;
-        color: #000;
+
 
         div.card {
           min-height: 200px;
@@ -31,9 +31,11 @@ body {
             border-bottom-color: #afdedc;
             border-bottom-width: 7px;
             animation: 2s;
+            color: #000;
           }
 
           div.card-body {
+            color: #000;
 
             textarea#body {
               min-width: 80%;

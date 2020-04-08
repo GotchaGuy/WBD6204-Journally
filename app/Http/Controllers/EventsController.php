@@ -18,7 +18,7 @@ class EventsController extends Controller
     {
 
         $event = Event::find($id);
-        $event->timestamp = \Carbon\Carbon::parse($event->updated_at)->format('M d Y');
+        $event->timestamp = \Carbon\Carbon::parse($event->updated_at)->format('M d Y - l');
         return view("event-edit", compact("event"));
     }
 

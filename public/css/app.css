@@ -11052,7 +11052,6 @@ body main div.container {
 
 body main div.container a {
   text-decoration: inherit;
-  color: #000;
 }
 
 body main div.container a div.card {
@@ -11083,6 +11082,11 @@ body main div.container a div.card div.card-header {
   border-bottom-width: 7px;
   -webkit-animation: 2s;
           animation: 2s;
+  color: #000;
+}
+
+body main div.container a div.card div.card-body {
+  color: #000;
 }
 
 body main div.container a div.card div.card-body textarea#body {

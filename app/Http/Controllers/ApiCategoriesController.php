@@ -25,4 +25,24 @@ class ApiCategoriesController extends Controller
 //        , 'category_id' => 1
         return $category;
     }
+
+    public function update(Request $request, $id)
+    {
+
+        $category = Category::where('id', $id)->update($request->all());
+        $category->merge(['user_id' => \Auth::user()->id]);
+        return $category;
+
+//        return redirect('/categories');
+    }
+
+    public function delete($id)
+    {
+        $category = Category::where('id', $id)->destroy();
+
+        return $category;
+
+//        return redirect('/categories');
+
+    }
 }

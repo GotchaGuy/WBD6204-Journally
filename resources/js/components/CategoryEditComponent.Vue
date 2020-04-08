@@ -13,7 +13,7 @@
                             <button type="button"
                                     class="btn btn-primary
                                     mb-3 mr-3 float-right"
-                                    @click="submitPost()">
+                                    @click="submitCategory()">
                                 Add
                             </button>
                         </div>
@@ -29,11 +29,20 @@
                     </div>
                     <div class="card-body">
                         <form>
-                            <textarea type="text" class="form-control mb-3" name="title">{{category.title}}</textarea>
-                            <a :href="'/categories/' + category.id" role="button"
-                               class=" btn btn-outline-success float-right  ml-1 mb-2">Save</a>
-                            <a :href="'/categories/' + category.id" role="button"
-                               class=" btn btn-outline-danger float-right mr-3">Delete</a>
+                            <textarea type="text" class="form-control mb-3" name="title" v-model="updated.item[id].title">{{category.title}}</textarea>
+                            <textarea name="id" v-model="updated.item[id].id" hidden>{{category.id}}</textarea>
+                            <button type="button" class="btn btn-outline-success
+                             float-right  ml-1 mb-2"
+                                    :@click="updateCategory(category.id)">
+                                Save
+                            </button>
+                            <button type="button" class="btn btn-outline-danger
+                             float-right mr-3"
+                                    :@click="deleteCategory(category.id)">
+                                Delete
+                            </button>
+                            <!--                            <a :href="'/categories/' + category.id" role="button"-->
+                            <!--                               class=" btn btn-outline-danger float-right mr-3">Delete</a>-->
                         </form>
                     </div>
                 </div>
@@ -55,6 +64,12 @@
                 newCategory: {
                     title: ''
                 },
+                updated: {
+                    item1: {
+                        id: '',
+                        title: ''
+                    }
+                },
                 categories: {}
             }
         },
@@ -67,12 +82,25 @@
 
         },
         methods: {
-            submitPost() {
-                axios.post('/api/categories', this.newCategory)
+            submitCategory() {
+                axios.post('/api/categories/', this.newCategory)
                     .then((response) => {
                         console.log(response.data);
                         this.categories.unshift(response.data);
-                        // EventBus.$emit('post-submitted', response.data);
+                    })
+            },
+            updateCategory($id) {
+                axios.put('/api/categories/' + $id, this.updated.item[id], $id)
+                    .then((response) => {
+                        console.log(response.data);
+                        this.categories.splice($id, 1, response.data);
+                    })
+            },
+            deleteCategory($id) {
+                axios.post('/api/categories/' + $id, $id)
+                    .then((response) => {
+                        console.log(response.data);
+                        this.categories.splice($id, 1);
                     })
             },
         }

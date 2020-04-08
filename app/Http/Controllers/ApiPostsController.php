@@ -29,7 +29,6 @@ class ApiPostsController extends Controller
         event(new PostCreated($post));
 //        \Mail::to(\Auth::user()->email)->send(new PostCreated($post));
 //        \Mail::to('v.lelicanin@sae.edu')->send(new PostCreated($post));
-//        , 'category_id' => 1
         return $post;
     }
 
