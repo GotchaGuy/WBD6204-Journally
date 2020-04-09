@@ -9,11 +9,10 @@
                         </div>
                         <div class="card-body row">
                             <div class="col">
-                                <label for="status">Type of event:</label>
-                                <select name="status" id="status" class="form-control"
-                                        v-model="newEvent.type">
-                                    <option value="Type of event" selected disabled hidden>Type of event</option>
-                                    <option v-for="status in statuses" v-bind:value="status.id">
+                                <label for="status_id">Type of event:</label>
+                                <select name="status_id" id="status_id" class="form-control"
+                                        v-model="newEvent.status_id">
+                                    <option v-for="status in statuses" :value="status.id">
                                         {{status.title}}
                                     </option>
                                 </select>
@@ -21,7 +20,6 @@
                                           placeholder="Write your event details here..."
                                           v-model="newEvent.content">
                             </textarea>
-                                <!--                                <div class="form-control mt-3">{{this.newEvent.date}}</div>-->
                                 <button type="button" class="btn btn-primary mt-3 mr-3 float-right"
                                         @click="submitEvent()">
                                     Save
@@ -48,7 +46,7 @@
         data() {
             return {
                 newEvent: {
-                    type: '',
+                    status_id: '',
                     content: '',
                     date: new Date().toISOString().substr(0, 10),
 

@@ -9,27 +9,26 @@
 
                             <button type="button" class="btn btn-outline-success
                              float-right  ml-1"
-                                    :@click="updateEvent(event.id)">
+                                    @click="updateEvent(event.id)">
                                 Save
                             </button>
                             <button type="button" class="btn btn-outline-danger
                              float-right mr-3"
-                                    :@click="deleteEvent(event.id)">
+                                    @click="deleteEvent(event.id)">
                                 Delete
                             </button>
 
                         </div>
                         <div class="card-body">
                             <select name="status" id="status" class="form-control"
-                                    v-model="updated.type">
-                                <option :value="event.type" selected disabled hidden>{{event.type}}</option>
-                                <option v-for="status in statuses" v-bind:value="status.id">
+                                    v-model="event.status.id">
+                                <option v-for="status in statuses" :value="status.id">
                                     {{status.title}}
                                 </option>
                             </select>
                             <textarea name="id" hidden v-model="updated.user_id">{{event.user_id}}</textarea>
                             <textarea class="card-text md-12 mt-4 form-control" name="body" id="body"
-                                      placeholder="Write your event here..." v-model="updated.content">{{event.content}}</textarea>
+                                      placeholder="Write your event here..." v-model="event.content"></textarea>
                         </div>
                     </div>
                 </form>
@@ -43,7 +42,11 @@
         props: ["dataEvent"],
         data() {
             return {
-                event: {},
+                event: {
+                    status: {
+                        id: ''
+                    }
+                },
                 statuses: {},
                 updated: {
                     content: '',
@@ -69,9 +72,9 @@
                     })
             },
             deleteEvent($id) {
-                axios.post('/api/events/' + $id, $id)
+                axios.delete('/api/events/' + $id)
                     .then((response) => {
-                        console.log(response.data);
+                        window.location.href = '/calendar';
                     })
             }
         }

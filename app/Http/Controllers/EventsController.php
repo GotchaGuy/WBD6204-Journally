@@ -22,20 +22,6 @@ class EventsController extends Controller
         return view("event-edit", compact("event"));
     }
 
-    public function update(Request $request, $id)
-    {
-        Event::where('id', $id)->update($request->all());
 
-        return redirect('/calendar');
-
-    }
-
-    public function delete($id)
-    {
-        Event::where('id', $id)->destroy();
-
-        return redirect('/calendar');
-
-    }
 
 }

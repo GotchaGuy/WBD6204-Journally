@@ -28,8 +28,7 @@ Route::middleware('auth')->get('/categories', 'CategoriesController@index')->nam
 
 
 Route::middleware('auth')->get('/calendar/{id}/edit', 'EventsController@edit')->name('event-edit');
-Route::middleware('auth')->put('/calendar/{id}', 'EventsController@update')->name('event-update');
-Route::middleware('auth')->delete('/calendar/{id}', 'EventsController@destroy')->name('event-delete');
+
 
 
 Route::get('/', function () {

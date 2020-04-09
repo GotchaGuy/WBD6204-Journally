@@ -16,9 +16,7 @@
                                 <label for="category">Category:</label>
                                 <select name="category" id="category" class="form-control"
                                         v-model="post.category_id">
-<!--                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}-->
-<!--                                    </option>-->
-                                    <option v-for="category in categories" v-bind:value="category.id">
+                                    <option v-for="category in categories" :value="category.id">
                                         {{category.title}}
                                     </option>
                                 </select>
