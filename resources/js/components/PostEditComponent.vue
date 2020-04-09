@@ -13,12 +13,17 @@
                             <!--                                // add the select-->
                             <!--                            </div>-->
                             <div class="col">
-                                <a :href="'/posts/' + post.id" role="button"
-                                   class=" btn btn-outline-success float-right  ml-1 mb-2">Save</a>
+                                <button type="button" class="btn btn-outline-success
+                             float-right  ml-1 mb-2 " :@click="updatePost(post.id)">
+                                    Save
+                                </button>
                                 <a :href="'/posts/' + post.id + '/edit'" tabindex="-1" role="button"
                                    class=" btn btn-primary float-right disabled" aria-disabled="true">Edit</a>
-                                <a :href="'/posts/' + post.id" role="button"
-                                   class=" btn btn-outline-danger float-right mr-3">Delete</a>
+                                <button type="button" class="btn btn-outline-danger
+                             float-right mr-3"
+                                        :@click="deletePost(post.id)">
+                                    Delete
+                                </button>
 
                             </div>
                         </div>
@@ -40,12 +45,33 @@
         props: ["dataPost"],
         data() {
             return {
-                post: {}
+                post: {},
+                updated: {
+                    title: "",
+                    body: "",
+
+                    category: ""
+
+                }
             }
         },
         mounted() {
             this.post = JSON.parse(this.dataPost);
         },
+        methods: {
+            updatePost($id) {
+                axios.put('/api/posts/' + $id, this.updated, $id)
+                    .then((response) => {
+                        console.log(response.data);
+                    })
+            },
+            deletePost($id) {
+                axios.post('/api/posts/' + $id, $id)
+                    .then((response) => {
+                        console.log(response.data);
+                    })
+            }
+        }
 
     }
 

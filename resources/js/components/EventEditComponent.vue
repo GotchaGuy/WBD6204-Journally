@@ -6,21 +6,30 @@
                     <div class="card pb-3 post">
                         <div class="card-header">
                             <strong>{{event.timestamp}}</strong>
-                                <a :href="'/calendar/' + event.id" role="button"
-                                   class=" btn btn-outline-success float-right  ml-1">Save</a>
-                                <a :href="'/posts/' + event.id" role="button"
-                                   class=" btn btn-outline-danger float-right mr-3">Delete</a>
+
+                            <button type="button" class="btn btn-outline-success
+                             float-right  ml-1"
+                                    :@click="updateEvent(event.id)">
+                                Save
+                            </button>
+                            <button type="button" class="btn btn-outline-danger
+                             float-right mr-3"
+                                    :@click="deleteEvent(event.id)">
+                                Delete
+                            </button>
+
                         </div>
                         <div class="card-body">
                             <select name="status" id="status" class="form-control"
-                                    v-model="event.type">
+                                    v-model="updated.type">
                                 <option :value="event.type" selected disabled hidden>{{event.type}}</option>
                                 <option v-for="status in statuses" v-bind:value="status.id">
                                     {{status.title}}
                                 </option>
                             </select>
+                            <textarea name="id" hidden v-model="updated.user_id">{{event.user_id}}</textarea>
                             <textarea class="card-text md-12 mt-4 form-control" name="body" id="body"
-                                      placeholder="Write your event here...">{{event.content}}</textarea>
+                                      placeholder="Write your event here..." v-model="updated.content">{{event.content}}</textarea>
                         </div>
                     </div>
                 </form>
@@ -34,12 +43,13 @@
         props: ["dataEvent"],
         data() {
             return {
-                event: {
-                    type: '',
+                event: {},
+                statuses: {},
+                updated: {
                     content: '',
-
-                },
-                statuses: {}
+                    user_id: '',
+                    type: ''
+                }
             }
         },
         mounted() {
@@ -47,10 +57,24 @@
             axios.get('/api/statuses')
                 .then((response) => {
                     this.statuses = response.data;
+                    console.log(this.statuses);
                 })
 
         },
-
+        methods: {
+            updateEvent($id) {
+                axios.put('/api/events/' + $id, this.event, $id)
+                    .then((response) => {
+                        console.log(response.data);
+                    })
+            },
+            deleteEvent($id) {
+                axios.post('/api/events/' + $id, $id)
+                    .then((response) => {
+                        console.log(response.data);
+                    })
+            }
+        }
     }
 
 </script>

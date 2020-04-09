@@ -6,12 +6,23 @@
                     <div class="card-header"><strong>{{post.title}}</strong>  | {{post.timestamp}}
 <!--                        | {{findCategTitle(post.category_id)}}-->
 
-                        <a :href="'/posts/' + post.id" tabindex="-1" role="button"
-                           class=" btn btn-success float-right  ml-1 disabled " aria-disabled="true">Save</a>
+<!--                        <a :href="'/posts/' + post.id" tabindex="-1" role="button"-->
+<!--                           class=" btn btn-success float-right  ml-1 disabled " aria-disabled="true">Save</a>-->
+<!--                        <a :href="'/posts/' + post.id" role="button"-->
+<!--                           class=" btn btn-outline-danger float-right mr-3">Delete</a>-->
+
+                         <button type="button" class="btn btn-success
+                             float-right  ml-1 disabled">
+                                Save
+                            </button>
                         <a :href="'/posts/' + post.id + '/edit'" role="button"
                            class=" btn btn-outline-primary float-right">Edit</a>
-                        <a :href="'/posts/' + post.id" role="button"
-                           class=" btn btn-outline-danger float-right mr-3">Delete</a>
+<!--                        <button type="button" class="btn btn-outline-primary-->
+<!--                             float-right"-->
+<!--                                    :@click="editPost(post.id)">-->
+<!--                                Edit-->
+<!--                            </button>-->
+
 
                     </div>
                     <div class="card-body">
@@ -37,9 +48,21 @@
         },
         mounted() {
             this.post = JSON.parse(this.dataPost);
-            // console.log(this.post);
+            console.log(this.post);
         },
         methods: {
+            // updateEvent($id) {
+            //     axios.put('/api/events/' + $id, this.event, $id)
+            //         .then((response) => {
+            //             console.log(response.data);
+            //         })
+            // },
+            // deletePost($id) {
+            //     axios.post('/api/posts/' + $id, $id)
+            //         .then((response) => {
+            //             console.log(response.data);
+            //         })
+            // }
             // findCategTitle($id) {
             //     foreach(this.categories in this.category) {
             //         if (this.post.category_id == this.category.id) {

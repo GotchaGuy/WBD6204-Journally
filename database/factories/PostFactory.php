@@ -11,6 +11,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'body' => $faker->paragraph(7, true),
         'image' => 'https://source.unsplash.com/random/523x313',
         'user_id' => $faker->numberBetween(1, 20),
-        'category_id' => $faker-> numberBetween(1, 4)
+        'category_id' => $faker-> numberBetween(1, 5)
         ];
 });

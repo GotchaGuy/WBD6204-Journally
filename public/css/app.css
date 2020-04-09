@@ -2,18 +2,17 @@
 
 body {
   background-image: url("/images/dusty-Wood.jpg");
+  background-repeat: repeat;
 }
 
-body nav.navbar {
+body nav.navbar-light {
   border-radius: 0px 0px 15px 15px;
   height: 60px;
   background-color: #fcf7f8 !important;
-  border-bottom-width: 7px;
-  border-bottom-color: #afdedc;
   box-sizing: border-box;
 }
 
-body nav.navbar div#navbarDropdownMenuLink a.nav-link {
+body nav.navbar-light div#navbarDropdownMenuLink a.nav-link {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -24,6 +23,19 @@ body div.badge {
   border: 4px;
   border-color: #c4d7f2;
   font-size: 40px;
+}
+
+body div.footer {
+  width: 100%;
+  height: 60px;
+  max-height: 120px;
+  margin-top: 40px;
+  background-color: #fcf7f8;
+}
+
+body div.footer div.mid {
+  display: inline-block;
+  text-align: center;
 }
 
 /*!
@@ -11087,6 +11099,12 @@ body main div.container a div.card div.card-header {
 
 body main div.container a div.card div.card-body {
   color: #000;
+}
+
+body main div.container a div.card div.card-body div.el-upload .el-upload--text {
+  display: block;
+  max-width: 60%;
+  margin-left: 20%;
 }
 
 body main div.container a div.card div.card-body textarea#body {

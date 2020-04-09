@@ -7,15 +7,17 @@
                     <form enctype="multipart/form-data">
                         <div class="card-header row">
                             <div class="col">
+                                <label for="title">Title:</label>
                                 <input class="form-control md-6" type="text" name="title" id="title"
                                        placeholder="Your title here..."
                                        v-model="post.title">
                             </div>
                             <div class="col">
+                                <label for="category">Category:</label>
                                 <select name="category" id="category" class="form-control"
                                         v-model="post.category_id">
-                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}
-                                    </option>
+<!--                                    <option :value="categories[0].id" selected disabled hidden>{{categories[0].title}}-->
+<!--                                    </option>-->
                                     <option v-for="category in categories" v-bind:value="category.id">
                                         {{category.title}}
                                     </option>
@@ -23,10 +25,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <!--                        <label for="image"></label>-->
-                            <!--                        <input type="file" id="image" name="image"  alt="" v-model="post.image">-->
                             <el-upload
-                                    class="upload-demo"
+                                    class="upload-demo mx-auto"
                                     drag
                                     action="/api/image/upload"
                                     :headers="headers"
@@ -46,7 +46,7 @@
                                       placeholder="Your thoughts here..."></textarea>
                         </div>
 
-                        <button type="button" class="btn btn-primary mb-3 mr-3 float-right" @click="submitPost()">Send
+                        <button type="button" class="btn btn-primary mb-3 mr-3 float-right" @click="submitPost()">Save
                         </button>
                     </form>
                 </div>
@@ -71,7 +71,7 @@
                 },
                 dialogImageUrl: '',
                 dialogVisible: false,
-                categories: '',
+                categories: {},
                 headers: {'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content}
 
             }

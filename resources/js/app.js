@@ -23,7 +23,8 @@ window.moment = require('moment');
 // var moment = require('moment');
 // moment().format();
 
-
+import Vuetify from 'vuetify';
+Vue.use(Vuetify);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -38,6 +39,7 @@ window.moment = require('moment');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 Vue.component('el-nav', require('./components/NavigationComponent.vue').default);
+Vue.component('footer-comp', require('./components/FooterComponent.vue').default);
 
 Vue.component('posts', require('./components/PostsComponent.vue').default);
 Vue.component('post', require('./components/PostComponent.vue').default);
@@ -61,4 +63,5 @@ Vue.component('category-edit', require('./components/CategoryEditComponent.vue')
 
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify(),
 });

@@ -37,6 +37,13 @@ body {
           div.card-body {
             color: #000;
 
+
+            div.el-upload .el-upload--text {
+              display: block;
+              max-width: 60%;
+              margin-left: 20%;
+            }
+
             textarea#body {
               min-width: 80%;
               min-height: 80px;
