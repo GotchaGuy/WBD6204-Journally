@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
                 <form enctype="multipart/form-data" class="make">
-                    <div class="card pb-3 post">
+                    <div class="card pb-3">
                         <div class="card-header">
                             <strong>What do you have planned?</strong>
                         </div>
@@ -17,7 +17,7 @@
                                     </option>
                                 </select>
                                 <textarea class="card-text md-12 mt-4 form-control" name="body" id="body"
-                                          placeholder="Write your event details here..."
+                                          placeholder="What are you up to that day..."
                                           v-model="newEvent.content">
                             </textarea>
                                 <button type="button" class="btn btn-primary mt-3 mr-3 float-right"

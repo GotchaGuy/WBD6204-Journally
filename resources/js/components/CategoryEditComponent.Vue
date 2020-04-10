@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <div class="container categories">
         <!--category add-->
         <div class="row justify-content-center">
-            <div class="col-md-4 mb-2">
-                <div class="card">
+            <div class="col-md-3 mb-2">
+                <div class="card form">
                     <form>
                         <div class="card-header row">
                             <div class="col"><strong>Add a new Category</strong></div>
@@ -14,14 +14,14 @@
                                     class="btn btn-primary
                                     mb-3 mr-3 float-right"
                                     @click="submitCategory()">
-                                Add
+                                    Add
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <!--        category edit, delete, update-->
+            <!--        category delete, update-->
             <div class="col-md-3 mb-3" v-for="(category, index) in categories">
                 <div class="card hvr-underline-from-left md-4  float-left">
                     <div class="card-header row">
@@ -29,20 +29,15 @@
                     </div>
                     <div class="card-body">
                         <form>
-                            <textarea type="text" class="form-control mb-3" name="title" v-model="updated.item[id].title">{{category.title}}</textarea>
-                            <textarea name="id" v-model="updated.item[id].id" hidden>{{category.id}}</textarea>
+                            <input type="text" class="form-control mb-3" name="title" v-model="category.title"></input>
                             <button type="button" class="btn btn-outline-success
-                             float-right  ml-1 mb-2"
-                                    :@click="updateCategory(category.id)">
+                             float-right  ml-1 mb-3" @click="updateCategory(category)">
                                 Save
                             </button>
                             <button type="button" class="btn btn-outline-danger
-                             float-right mr-3"
-                                    :@click="deleteCategory(category.id)">
+                             float-right mr-3  mb-3" @click="deleteCategory(category.id, index)">
                                 Delete
                             </button>
-                            <!--                            <a :href="'/categories/' + category.id" role="button"-->
-                            <!--                               class=" btn btn-outline-danger float-right mr-3">Delete</a>-->
                         </form>
                     </div>
                 </div>
@@ -64,13 +59,7 @@
                 newCategory: {
                     title: ''
                 },
-                updated: {
-                    item1: {
-                        id: '',
-                        title: ''
-                    }
-                },
-                categories: {}
+                categories: {},
             }
         },
         mounted() {
@@ -83,24 +72,22 @@
         },
         methods: {
             submitCategory() {
-                axios.post('/api/categories/', this.newCategory)
+                axios.post('/api/categories', this.newCategory)
                     .then((response) => {
                         console.log(response.data);
-                        this.categories.unshift(response.data);
+                        this.categories.push(response.data);
                     })
             },
-            updateCategory($id) {
-                axios.put('/api/categories/' + $id, this.updated.item[id], $id)
+            updateCategory($category) {
+                axios.put('/api/categories/' + $category.id, $category, $category.id)
                     .then((response) => {
-                        console.log(response.data);
-                        this.categories.splice($id, 1, response.data);
+                        this.categories.splice( $id, 1, $category);
                     })
             },
-            deleteCategory($id) {
-                axios.post('/api/categories/' + $id, $id)
+            deleteCategory($id, index) {
+                axios.delete('/api/categories/' + $id)
                     .then((response) => {
-                        console.log(response.data);
-                        this.categories.splice($id, 1);
+                        this.categories.splice( index, 1);
                     })
             },
         }

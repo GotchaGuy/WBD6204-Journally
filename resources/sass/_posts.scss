@@ -54,31 +54,35 @@ body {
         }
       }
 
-      //div.post-form {
+      div.card-body {
+        color: #000;
+        //background-color: orange;
 
-        div.card-body {
-          color: #000;
-          //background-color: orange;
+        div#upload {
+          text-align: center;
 
-          div#upload {
-            text-align: center;
+          div.el-upload .el-upload--text {
+            display: inline-block;
+            margin: 0 auto;
+            width: 100%;
 
-            div.el-upload .el-upload--text {
-              display: inline-block;
-              margin: 0 auto;
-              width: 100%;
-
-              div.el-upload-dragger .el-upload--picture-card{
-                img {
-                  width: 100%;
-                  object-fit: cover;
-                }
+            div.el-upload-dragger .el-upload--picture-card {
+              img {
+                width: 100%;
+                object-fit: cover;
               }
-
             }
+
           }
         }
-      //}
+      }
+
+      div.post-form {
+          overflow: hidden;
+        div.card-header {
+          background: linear-gradient(to top right, $columbia, $powder, $cadet);
+        }
+      }
 
       /* Underline From Left */
       .hvr-underline-from-left {

@@ -27,6 +27,7 @@ Route::middleware('auth:api')->delete('posts/{id}', 'ApiPostsController@delete')
 
 
 Route::middleware('auth:api')->get('categories', 'ApiCategoriesController@index');
+Route::middleware('auth:api')->post('categories', 'ApiCategoriesController@store');
 Route::middleware('auth:api')->put('categories/{id}', 'ApiCategoriesController@update');
 Route::middleware('auth:api')->delete('categories/{id}', 'ApiCategoriesController@delete');
 

@@ -3,6 +3,7 @@
 body {
   background-image: url("/images/dusty-Wood.jpg");
   background-repeat: repeat;
+  min-height: 600px;
 }
 
 body nav.navbar-light {
@@ -11132,6 +11133,14 @@ body main div.container div.card-body div#upload div.el-upload .el-upload--text 
      object-fit: cover;
 }
 
+body main div.container div.post-form {
+  overflow: hidden;
+}
+
+body main div.container div.post-form div.card-header {
+  background: linear-gradient(to top right, #c4d7f2, #afdedc, #91a8a4);
+}
+
 body main div.container .hvr-underline-from-left {
   display: inline-block;
   vertical-align: middle;
@@ -11163,6 +11172,20 @@ body main div.container .hvr-underline-from-left:active:before {
 
 body main div.container .categ {
   color: #fcf7f8;
+}
+
+body .categories .form {
+  overflow: hidden;
+}
+
+body .categories .form .card-header {
+  background: linear-gradient(to top right, #c4d7f2, #afdedc);
+}
+
+body .v-application .primary {
+  background: linear-gradient(to top right, #c4d7f2, #afdedc, #91a8a4);
+  color: #565656;
+  font-weight: bold;
 }
 
 body div.ant-fullcalendar-fullscreen {

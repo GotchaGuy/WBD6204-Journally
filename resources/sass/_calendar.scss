@@ -1,5 +1,15 @@
 body {
 
+  div.v-picker__title .primary {
+  }
+  .v-application .primary {
+    background: linear-gradient(to top right, $columbia, $powder, $cadet);
+    color: #565656;
+    font-weight: bold;
+
+  }
+
+
   div.ant-fullcalendar-fullscreen {
     //background: linear-gradient(#91a8a4, #afdedc);
     background-color: $snow;
@@ -36,19 +46,6 @@ body {
 
         }
 
-        //.ant-badge-status:hover {
-        //
-        //  font-size: 12px;
-        //
-        //}
-        //
-        //span.ant-badge {
-        //  animation: 2s;
-        //}
-
-        //a > span.ant-badge-status-text:hover {
-        //  color: $snow;
-        //}
       }
 
       /* Bounce To Right */
