@@ -4,12 +4,8 @@
             <div class="col-md-6 mb-2">
                 <div class="card pb-3 post">
                     <div class="card-header"><strong>{{post.title}}</strong>  | {{post.timestamp}}
-<!--                        | {{findCategTitle(post.category_id)}}-->
+<!--                        | {{post.category.title}}-->
 
-<!--                        <a :href="'/posts/' + post.id" tabindex="-1" role="button"-->
-<!--                           class=" btn btn-success float-right  ml-1 disabled " aria-disabled="true">Save</a>-->
-<!--                        <a :href="'/posts/' + post.id" role="button"-->
-<!--                           class=" btn btn-outline-danger float-right mr-3">Delete</a>-->
 
                          <button type="button" class="btn btn-success
                              float-right  ml-1 disabled">

@@ -18,7 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->get('/posts/{id}', 'PostsController@show')->name('posts');
 Route::middleware('auth')->get('/posts/{id}/edit', 'PostsController@edit')->name('post-edit');
-Route::middleware('auth')->put('/posts/{id}', 'PostsController@update')->name('post-update');
+//Route::middleware('auth')->put('/posts/{id}', 'PostsController@update')->name('post-update');
 
 Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('calendar');
 

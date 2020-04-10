@@ -11101,12 +11101,6 @@ body main div.container a div.card div.card-body {
   color: #000;
 }
 
-body main div.container a div.card div.card-body div.el-upload .el-upload--text {
-  display: block;
-  max-width: 60%;
-  margin-left: 20%;
-}
-
 body main div.container a div.card div.card-body textarea#body {
   min-width: 80%;
   min-height: 80px;
@@ -11116,6 +11110,26 @@ body main div.container a div.card div.card-body textarea#body {
 
 body main div.container a div.card:hover img {
   height: 158px;
+}
+
+body main div.container div.card-body {
+  color: #000;
+}
+
+body main div.container div.card-body div#upload {
+  text-align: center;
+}
+
+body main div.container div.card-body div#upload div.el-upload .el-upload--text {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+body main div.container div.card-body div#upload div.el-upload .el-upload--text div.el-upload-dragger .el-upload--picture-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body main div.container .hvr-underline-from-left {

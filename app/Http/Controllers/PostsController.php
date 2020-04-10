@@ -25,19 +25,6 @@ class PostsController extends Controller
         return view("post-edit", compact("post"));
     }
 
-    public function update(Request $request, $id)
-    {
-        Post::where('id', $id)->update($request->all());
 
-        return redirect('/home');
-    }
-
-    public function delete($id)
-    {
-        Post::where('id', $id)->destroy();
-
-        return redirect('/home');
-
-    }
 
 }

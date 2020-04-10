@@ -26,7 +26,6 @@
                                     {{status.title}}
                                 </option>
                             </select>
-                            <textarea name="id" hidden v-model="updated.user_id">{{event.user_id}}</textarea>
                             <textarea class="card-text md-12 mt-4 form-control" name="body" id="body"
                                       placeholder="Write your event here..." v-model="event.content"></textarea>
                         </div>
@@ -68,7 +67,7 @@
             updateEvent($id) {
                 axios.put('/api/events/' + $id, this.event, $id)
                     .then((response) => {
-                        console.log(response.data);
+                        window.location.href = '/calendar';
                     })
             },
             deleteEvent($id) {

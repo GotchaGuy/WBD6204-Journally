@@ -19,6 +19,7 @@ body {
 
           div.box {
             height: 79px;
+
             img {
               height: 100%;
               width: 100%;
@@ -37,13 +38,6 @@ body {
           div.card-body {
             color: #000;
 
-
-            div.el-upload .el-upload--text {
-              display: block;
-              max-width: 60%;
-              margin-left: 20%;
-            }
-
             textarea#body {
               min-width: 80%;
               min-height: 80px;
@@ -54,10 +48,37 @@ body {
 
         }
 
+
         div.card:hover img {
           height: 158px;
         }
       }
+
+      //div.post-form {
+
+        div.card-body {
+          color: #000;
+          //background-color: orange;
+
+          div#upload {
+            text-align: center;
+
+            div.el-upload .el-upload--text {
+              display: inline-block;
+              margin: 0 auto;
+              width: 100%;
+
+              div.el-upload-dragger .el-upload--picture-card{
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+
+            }
+          }
+        }
+      //}
 
       /* Underline From Left */
       .hvr-underline-from-left {

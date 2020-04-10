@@ -32,5 +32,25 @@ class ApiPostsController extends Controller
         return $post;
     }
 
+    public function update(Request $request, $id)
+    {
+       return Post::where('id', $id)->update([
+           'title' => $request->input('title'),
+            'body' => $request->input('body'),
+            'category_id' => $request->input('category_id'),
+           'image' => $request->input('image'),
+        ]);
+
+//        return redirect('/home');
+    }
+
+    public function delete($id)
+    {
+       return Post::destroy($id);
+
+//        return redirect('/home');
+
+    }
+
 
 }

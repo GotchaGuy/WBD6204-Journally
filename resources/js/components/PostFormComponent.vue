@@ -3,7 +3,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
-                <div class="card">
+                <div class="card post-form">
                     <form enctype="multipart/form-data">
                         <div class="card-header row">
                             <div class="col">
@@ -23,6 +23,7 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <div id="upload" class="align-content-center">
                             <el-upload
                                     class="upload-demo mx-auto"
                                     drag
@@ -40,6 +41,7 @@
                             <el-dialog :visible.sync="dialogVisible">
                                 <img width="100%" :src="dialogImageUrl" alt="">
                             </el-dialog>
+                            </div>
                             <textarea class="card-text form-control mt-3" name="body" v-model="post.body" id="body"
                                       placeholder="Your thoughts here..."></textarea>
                         </div>
