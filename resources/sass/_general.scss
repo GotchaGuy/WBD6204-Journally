@@ -2,21 +2,29 @@ body {
   background-image: url("/images/dusty-Wood.jpg");
   background-repeat: repeat;
   min-height: 600px;
+  margin: 0;
+  padding: 0;
 
 
 
   nav.sticky-top{
     border-radius: 0 0 15px 15px;
-    height: 70px;
-    background-color: $columbia !important;
+    min-height: 70px;
+    background: linear-gradient(to right, $columbia, $powder, $cadet);
     box-sizing: border-box;
     padding: 0;
 
     div.within {
       border-radius: 0 0 15px 15px;
-      height: 60px;
+      min-height: 64px;
       width: 100%;
       background-color: $snow;
+      position: absolute;
+      top: 0;
+
+      div.container {
+        //padding-top: 0;
+
       div#navbarDropdownMenuLink {
         a.nav-link {
           box-sizing: border-box;
@@ -24,6 +32,8 @@ body {
           width: 100%;
         }
       }
+      }
+
     }
 
   }

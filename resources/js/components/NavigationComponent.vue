@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="row">
         <img src="/images/logo.PNG" width="30" height="30" alt="logo">
         <a class="navbar-brand ml-3" href="/home">Journally</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
