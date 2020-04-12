@@ -22,7 +22,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                             <select name="category" id="category" class="form-control md-6 mb-3"
                                     v-model="post.category_id">
                                 <option v-for="category in categories" :value="category.id">

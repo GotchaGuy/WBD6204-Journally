@@ -1,13 +1,23 @@
 body {
 
-  div.v-picker__title .primary {
-  }
-  .v-application .primary {
-    background: linear-gradient(to top right, $columbia, $powder, $cadet);
-    color: #565656;
-    font-weight: bold;
 
-  }
+
+    div.form {
+      overflow: hidden;
+      .card-header {
+        background: linear-gradient(to top right, $columbia, $powder, $cadet);
+
+      }
+
+      .card-body {
+        .v-application .primary {
+          background: linear-gradient(to top right, $columbia, $powder, $cadet);
+          color: #565656;
+          font-weight: bold;
+
+        }
+      }
+    }
 
 
   div.ant-fullcalendar-fullscreen {

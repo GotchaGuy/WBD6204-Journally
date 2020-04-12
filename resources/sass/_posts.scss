@@ -38,16 +38,8 @@ body {
           div.card-body {
             color: #000;
 
-            textarea#body {
-              min-width: 80%;
-              min-height: 80px;
-              max-height: 200px;
-              background-color: #fcf7f8;
-            }
           }
-
         }
-
 
         div.card:hover img {
           height: 158px;
@@ -55,30 +47,35 @@ body {
       }
 
       div.card-body {
-        color: #000;
-        //background-color: orange;
-
-        div#upload {
-          text-align: center;
-
-          div.el-upload .el-upload--text {
-            display: inline-block;
-            margin: 0 auto;
-            width: 100%;
-
-            div.el-upload-dragger .el-upload--picture-card {
-              img {
-                width: 100%;
-                object-fit: cover;
-              }
-            }
-
-          }
+        textarea#body {
+          height: 130px;
+          min-height: 130px;
+          max-height: 200px;
         }
       }
 
+      //#upload {
+      //    text-align: center;
+      //
+      //    div.el-upload .el-upload--text {
+      //      display: inline-block;
+      //      margin: 0 auto;
+      //      width: 100%;
+      //
+      //      div.el-upload-dragger .el-upload--picture-card {
+      //        img {
+      //          width: 100%;
+      //          object-fit: cover;
+      //        }
+      //      }
+      //
+      //    }
+      //  }
+
+
       div.post-form {
-          overflow: hidden;
+        overflow: hidden;
+
         div.card-header {
           background: linear-gradient(to top right, $columbia, $powder, $cadet);
         }

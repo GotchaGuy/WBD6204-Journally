@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div class="within">
         <div class="float-left mt-3 ml-2">
         <img src="/images/logo.PNG" width="30" height="30" alt="logo" >
         </div>
@@ -20,7 +21,7 @@
                 </ul>
             </div>
         </nav>
-
+        </div>
     </div>
 
 </template>

@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
                 <form enctype="multipart/form-data" class="make">
-                    <div class="card pb-3">
+                    <div class="card pb-3 form">
                         <div class="card-header">
                             <strong>What do you have planned?</strong>
                         </div>

@@ -18,14 +18,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->get('/posts/{id}', 'PostsController@show')->name('posts');
 Route::middleware('auth')->get('/posts/{id}/edit', 'PostsController@edit')->name('post-edit');
-//Route::middleware('auth')->put('/posts/{id}', 'PostsController@update')->name('post-update');
 
 Route::middleware('auth')->get('/calendar', 'CalendarController@index')->name('calendar');
 
 Route::middleware('auth')->get('home/categories/{id}', 'CategoriesController@show')->name('category-posts');
 Route::middleware('auth')->get('/categories', 'CategoriesController@index')->name('categories');
-//Route::middleware('auth')->get('/categories/{id}/edit', 'CategoriesController@edit')->name('category-edit');
-
 
 Route::middleware('auth')->get('/calendar/{id}/edit', 'EventsController@edit')->name('event-edit');
 
