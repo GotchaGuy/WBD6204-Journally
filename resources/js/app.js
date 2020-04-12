@@ -54,6 +54,7 @@ Vue.component('event-edit', require('./components/EventEditComponent.vue').defau
 
 Vue.component('category-edit', require('./components/CategoryEditComponent.vue').default);
 
+Vue.component('favorites', require('./components/FavoritesComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

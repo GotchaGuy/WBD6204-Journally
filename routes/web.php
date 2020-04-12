@@ -26,7 +26,7 @@ Route::middleware('auth')->get('/categories', 'CategoriesController@index')->nam
 
 Route::middleware('auth')->get('/calendar/{id}/edit', 'EventsController@edit')->name('event-edit');
 
-
+Route::middleware('auth')->get('/favorites', 'FavoritesController@index')->name('favorites');
 
 Route::get('/', function () {
     return view('welcome');

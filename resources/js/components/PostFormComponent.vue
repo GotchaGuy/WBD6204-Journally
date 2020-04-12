@@ -23,24 +23,28 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <div class="custom-control custom-switch mb-2">
+                                <input type="checkbox" class="custom-control-input" id="favorite" v-model="post.favorite">
+                                <label class="custom-control-label" for="favorite">Favorite</label>
+                            </div>
                             <div id="upload" class="align-content-center">
-                            <el-upload
-                                    class="upload-demo mx-auto"
-                                    drag
-                                    action="/api/image/upload"
-                                    :headers="headers"
-                                    :on-success="handleUpload">
-                                <img v-if="post.image" :src="post.image" class="">
-                                <div v-else>
-                                    <i class="el-icon-upload"></i>
-                                    <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
-                                    <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb
+                                <el-upload
+                                        class="upload-demo mx-auto"
+                                        drag
+                                        action="/api/image/upload"
+                                        :headers="headers"
+                                        :on-success="handleUpload">
+                                    <img v-if="post.image" :src="post.image" class="">
+                                    <div v-else>
+                                        <i class="el-icon-upload"></i>
+                                        <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+                                        <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb
+                                        </div>
                                     </div>
-                                </div>
-                            </el-upload>
-                            <el-dialog :visible.sync="dialogVisible">
-                                <img width="100%" :src="dialogImageUrl" alt="">
-                            </el-dialog>
+                                </el-upload>
+                                <el-dialog :visible.sync="dialogVisible">
+                                    <img width="100%" :src="dialogImageUrl" alt="">
+                                </el-dialog>
                             </div>
                             <textarea class="card-text form-control mt-3" name="body" v-model="post.body" id="body"
                                       placeholder="Your thoughts here..."></textarea>
@@ -67,7 +71,8 @@
         data() {
             return {
                 post: {
-                    image: ''
+                    favorite: '',
+                    image: '',
                 },
                 dialogImageUrl: '',
                 dialogVisible: false,

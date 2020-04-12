@@ -1,12 +1,10 @@
 
 body {
-  //background-image: url("https://www.graphicsbeam.com/wp-content/uploads/2013/03/Dusty-Wood.jpg");
 
   main {
     div.container {
       a {
         text-decoration: inherit;
-
 
         div.card {
           min-height: 200px;
@@ -43,6 +41,19 @@ body {
 
         div.card:hover img {
           height: 158px;
+        }
+      }
+
+      div.card-header {
+        div.fave {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 30px 30px 0 0;
+          border-color: $yellow transparent transparent transparent;
         }
       }
 

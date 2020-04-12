@@ -12,7 +12,7 @@ class ApiPostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
+        $posts = Post::with('user', 'category')->orderBy('updated_at', 'desc')->get();
 
         foreach ($posts as $key => $post) {
             $posts[$key]->body = \Str::limit($post->body, 160);
@@ -39,6 +39,7 @@ class ApiPostsController extends Controller
             'body' => $request->input('body'),
             'category_id' => $request->input('category_id'),
            'image' => $request->input('image'),
+           'favorite' => $request->input('favorite'),
         ]);
 
 //        return redirect('/home');

@@ -11140,6 +11140,17 @@ body main div.container a div.card:hover img {
   height: 158px;
 }
 
+body main div.container div.card-header div.fave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 0;
+  border-color: #ffed4a transparent transparent transparent;
+}
+
 body main div.container div.card-body textarea#body {
   height: 130px;
   min-height: 130px;

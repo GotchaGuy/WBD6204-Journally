@@ -11,6 +11,7 @@
                             <img :src="post.image" alt="notesImage" class="card-img-top">
                         </div>
                         <div class="card-header row">
+                             <div v-if="post.favorite" class="fave"></div>
                             <div class="col"><strong>{{post.title}}</strong> | {{post.timestamp}}</div>
                             <div class="col text-right">{{post.category.title}}</div>
                         </div>
