@@ -65,7 +65,7 @@
             submitEvent() {
                 axios.post('/api/events', this.newEvent)
                     .then((response) => {
-                        console.log(response.data);
+                        window.location.reload();
                     })
             }
         }
@@ -80,6 +80,7 @@
     form.make {
         max-height: 500px;
         overflow: hidden;
+
         .datePick {
             height: 350px;
 

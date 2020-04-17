@@ -21,15 +21,14 @@
         props: ["dataPost"],
         data() {
             return {
-                events: {}
+                events: []
             }
         },
         mounted() {
             axios.get('/api/events')
                 .then((response) => {
                     this.events = response.data;
-                })
-
+                });
         },
         methods: {
             getListData(value) {

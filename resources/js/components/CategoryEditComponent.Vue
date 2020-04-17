@@ -31,7 +31,7 @@
                         <form>
                             <input type="text" class="form-control mb-3" name="title" v-model="category.title"></input>
                             <button type="button" class="btn btn-outline-success
-                             float-right  ml-1 mb-3" @click="updateCategory(category)">
+                             float-right  ml-1 mb-3" @click="updateCategory(category, index)">
                                 Save
                             </button>
                             <button type="button" class="btn btn-outline-danger
@@ -78,14 +78,14 @@
                         this.categories.push(response.data);
                     })
             },
-            updateCategory($category) {
-                axios.put('/api/categories/' + $category.id, $category, $category.id)
+            updateCategory(category, index) {
+                axios.put('/api/categories/' + category.id, category, category.id)
                     .then((response) => {
-                        this.categories.splice( $id, 1, $category);
+                        this.categories.splice( index, 1, category);
                     })
             },
-            deleteCategory($id, index) {
-                axios.delete('/api/categories/' + $id)
+            deleteCategory(id, index) {
+                axios.delete('/api/categories/' + id)
                     .then((response) => {
                         this.categories.splice( index, 1);
                     })

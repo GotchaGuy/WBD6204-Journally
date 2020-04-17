@@ -28,12 +28,11 @@ class HomeController extends Controller
 
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
         $categories = Category::all();
-//->simplePaginate(15);
          foreach ($posts as $key => $post) {
             $posts[$key]->body = \Str::limit($post->body, 160);
             $posts[$key]->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         }
-//    dd($posts->toArray());
+
         return view('home', compact('posts', 'categories'));
     }
 }
