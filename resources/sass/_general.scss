@@ -84,9 +84,24 @@ body {
       max-height: 113px;
       width: 100%;
       background-color: $snow;
+      overflow: hidden;
 
       nav.navbar {
         background-color: $snow;
+        ul {
+          display: inline-block;
+          li {
+            display: inline;
+            float: left;
+            padding: 5px;
+            a {
+              text-decoration: none;
+              color: #000;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
       }
     }
 

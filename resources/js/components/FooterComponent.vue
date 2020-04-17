@@ -5,8 +5,10 @@
         <img src="/images/logo.PNG" width="30" height="30" alt="logo" >
         </div>
 
-        <nav class="navbar navbar-expand-lg sm-4 navbar-light bg-light float-right">
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <nav  class="navbar float-right">
+<!--            class="navbar navbar-expand-lg sm-4 navbar-light bg-light-->
+            <div >
+<!--                class="collapse navbar-collapse " id="navbarNavDropdown"-->
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/home">Notes</a>

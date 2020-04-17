@@ -76,10 +76,28 @@ body div.footer div.within {
   max-height: 113px;
   width: 100%;
   background-color: #fcf7f8;
+  overflow: hidden;
 }
 
 body div.footer div.within nav.navbar {
   background-color: #fcf7f8;
+}
+
+body div.footer div.within nav.navbar ul {
+  display: inline-block;
+}
+
+body div.footer div.within nav.navbar ul li {
+  display: inline;
+  float: left;
+  padding: 5px;
+}
+
+body div.footer div.within nav.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  height: 100%;
+  width: 100%;
 }
 
 /*!
