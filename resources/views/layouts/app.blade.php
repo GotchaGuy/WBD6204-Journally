@@ -27,8 +27,9 @@
             <div class="container">
 {{--                <div>--}}
 {{--class="collapse navbar-collapse" id="navbarSupportedContent"--}}
+                   @auth
                     <el-nav></el-nav>
-
+                    @endauth
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav float-right">
 {{--                        ml-auto--}}
@@ -72,11 +73,11 @@
     <main class="py-4">
         @yield('content')
     </main>
-
+    @auth
     <div class="footer sticky-bottom">
         <footer-comp></footer-comp>
     </div>
-
+    @endauth
 </div>
 </body>
 </html>

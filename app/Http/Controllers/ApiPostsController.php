@@ -27,8 +27,9 @@ class ApiPostsController extends Controller
         $request->merge(['user_id' => \Auth::user()->id]);
         $post = Post::create($request->all());
         event(new PostCreated($post));
-//        \Mail::to(\Auth::user()->email)->send(new PostCreated($post));
-//        \Mail::to('v.lelicanin@sae.edu')->send(new PostCreated($post));
+        $post = Post::where('id', $post->id)->with(['category'])->first();
+        $post->body = \Str::limit($post->body, 160);
+        $post->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         return $post;
     }
 
@@ -41,16 +42,11 @@ class ApiPostsController extends Controller
            'image' => $request->input('image'),
            'favorite' => $request->input('favorite'),
         ]);
-
-//        return redirect('/home');
     }
 
     public function delete($id)
     {
        return Post::destroy($id);
-
-//        return redirect('/home');
-
     }
 
 
