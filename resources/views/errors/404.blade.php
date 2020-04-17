@@ -8,7 +8,7 @@
                 <div class="card-header"><strong>Dear 404,</strong></div>
                 <div class="card-body">
                     <div class="card-text">you are not supposed to be here. Sorry about that.</div>
-                    <a class="btn btn-primary mt-3 float-right" href="/home" role="button">Notes</a>
+                    <a class="btn btn-primary mt-3 float-right" href="/" role="button">Notes</a>
                 </div>
 
             </div>

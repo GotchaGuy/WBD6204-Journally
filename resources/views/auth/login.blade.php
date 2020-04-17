@@ -5,7 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
+                    <div class="card-header">
+                    <img class="logo-pic" src="/images/logo.PNG" alt="logo">
+                        {{ __('Login') }}
+                    </div>
                     <div id="decor">
                         <svg class="book-shelf" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
                              viewBox="0 0 84 94" height="94" width="84">

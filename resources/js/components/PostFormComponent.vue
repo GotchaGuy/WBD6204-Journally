@@ -71,7 +71,7 @@
         data() {
             return {
                 post: {
-                    favorite: '',
+                    favorite: false,
                     image: '',
                 },
                 dialogImageUrl: '',

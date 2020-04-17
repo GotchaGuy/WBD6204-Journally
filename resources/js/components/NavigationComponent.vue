@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <img src="/images/logo.PNG" width="30" height="30" alt="logo">
-        <a class="navbar-brand ml-3" href="/home">Journally</a>
+        <img class="logo-pic" src="/images/logo.PNG" alt="logo">
+        <a class="navbar-brand ml-3" href="/">Journally</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown active">
-                    <a class="nav-link" href="/home" id="navbarDropdownMenuLink"
+                    <a class="nav-link" href="/" id="navbarDropdownMenuLink"
                        aria-haspopup="true" aria-expanded="false">
                         Notes
                     </a>

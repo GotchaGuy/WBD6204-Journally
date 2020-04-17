@@ -95,13 +95,13 @@
             updatePost($id) {
                 axios.put('/api/posts/' + $id, this.post, $id)
                     .then((response) => {
-                        window.location.href = '/home';
+                        window.location.href = '/';
                     })
             },
             deletePost($id) {
                 axios.delete('/api/posts/' + $id)
                     .then((response) => {
-                        window.location.href = '/home';
+                        window.location.href = '/';
                     })
             },
             handleUpload(result, file) {
