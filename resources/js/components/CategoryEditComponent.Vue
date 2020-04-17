@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-3 mb-2">
                 <div class="card form">
-                    <form>
+                    <form id="categ-upload">
                         <div class="card-header row">
                             <div class="col"><strong>Add a new Category</strong></div>
                         </div>
@@ -76,6 +76,7 @@
                     .then((response) => {
                         console.log(response.data);
                         this.categories.push(response.data);
+                        document.getElementById("categ-upload").reset();
                     })
             },
             updateCategory(category, index) {

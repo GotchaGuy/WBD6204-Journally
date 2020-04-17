@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mb-2">
                 <div class="card post-form">
-                    <form enctype="multipart/form-data">
+                    <form enctype="multipart/form-data" id="post-upload">
                         <div class="card-header row">
                             <div class="col">
                                 <label for="title">Title:</label>
@@ -90,6 +90,7 @@
                     .then((response) => {
                         console.log(response.data);
                         EventBus.$emit('post-submitted', response.data);
+                        document.getElementById("post-upload").reset();
                     })
             },
             handleUpload(result, file) {
