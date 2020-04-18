@@ -1,0 +1,40 @@
+body {
+
+  div.footer {
+    width: 100%;
+    height: 70px;
+    max-height: 120px;
+    margin-top: 40px;
+    background-color: $columbia;
+
+    div.within {
+      height: 63px;
+      max-height: 113px;
+      width: 100%;
+      background-color: $snow;
+      overflow: hidden;
+
+      nav.navbar {
+        background-color: $snow;
+
+        ul {
+          display: inline-block;
+
+          li {
+            display: inline;
+            float: left;
+            padding: 5px;
+
+            a {
+              text-decoration: none;
+              color: #333333;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

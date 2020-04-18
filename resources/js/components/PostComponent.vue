@@ -35,28 +35,9 @@
         },
         mounted() {
             this.post = JSON.parse(this.dataPost);
-            console.log(this.post);
         },
         methods: {
-            // updateEvent($id) {
-            //     axios.put('/api/events/' + $id, this.event, $id)
-            //         .then((response) => {
-            //             console.log(response.data);
-            //         })
-            // },
-            // deletePost($id) {
-            //     axios.post('/api/posts/' + $id, $id)
-            //         .then((response) => {
-            //             console.log(response.data);
-            //         })
-            // }
-            // findCategTitle($id) {
-            //     foreach(this.categories in this.category) {
-            //         if (this.post.category_id == this.category.id) {
-            //             return this.category.title;
-            //         }
-            //     }
-            // }
+            //
         }
 
     }

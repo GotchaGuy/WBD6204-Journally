@@ -88,7 +88,6 @@
             axios.get('/api/categories')
                 .then((response) => {
                     this.categories = response.data;
-                    console.log(this.categories);
                 })
         },
         methods: {
@@ -105,7 +104,6 @@
                     })
             },
             handleUpload(result, file) {
-                console.log(result);
                 this.post.image = "/storage/" + result.name
             },
         }

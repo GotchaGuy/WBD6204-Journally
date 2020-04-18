@@ -14,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Route::get('/', function () {
-//
-//
-//    return view('welcome');
-//});
-
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -38,6 +32,4 @@ Route::middleware('auth')->get('/favorites', 'FavoritesController@index')->name(
 
 
 Auth::routes();
-
-//Route::get('/post', 'PostsController@index')->name('post');
 

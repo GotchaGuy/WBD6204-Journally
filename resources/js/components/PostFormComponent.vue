@@ -49,19 +49,14 @@
                             <textarea class="card-text form-control mt-3" name="body" v-model="post.body" id="body"
                                       placeholder="Your thoughts here..."></textarea>
                         </div>
-
                         <button type="button" class="btn btn-primary mb-3 mr-3 float-right" @click="submitPost()">Save
                         </button>
                     </form>
                 </div>
 
                 <div><a class="btn btn-primary mt-2 categ" href="/categories">Edit Categories</a></div>
-
             </div>
-
         </div>
-
-
     </div>
 </template>
 
@@ -88,13 +83,11 @@
             submitPost() {
                 axios.post('/api/posts', this.post)
                     .then((response) => {
-                        console.log(response.data);
                         EventBus.$emit('post-submitted', response.data);
                         document.getElementById("post-upload").reset();
                     })
             },
             handleUpload(result, file) {
-                console.log(result);
                 this.post.image = "/storage/" + result.name
             },
         }

@@ -1,24 +1,20 @@
 body {
 
+  div.form {
+    overflow: hidden;
 
-
-    div.form {
-      overflow: hidden;
-      .card-header {
-        background: linear-gradient(to top right, $columbia, $powder, $cadet);
-
-      }
-
-      .card-body {
-        .v-application .primary {
-          background: linear-gradient(to top right, $columbia, $powder, $cadet);
-          color: #565656;
-          font-weight: bold;
-
-        }
-      }
+    .card-header {
+      background: linear-gradient(to top right, $columbia, $powder, $cadet);
     }
 
+    .card-body {
+      .v-application .primary {
+        background: linear-gradient(to top right, $columbia, $powder, $cadet);
+        color: #565656;
+        font-weight: bold;
+      }
+    }
+  }
 
   div.ant-fullcalendar-fullscreen {
     //background: linear-gradient(#91a8a4, #afdedc);
@@ -29,7 +25,6 @@ body {
     .notes-month {
       text-align: center;
       font-size: 28px;
-
       .notes-month section {
         font-size: 28px;
       }
@@ -53,9 +48,7 @@ body {
           width: 100%;
           text-overflow: ellipsis;
           font-size: 12px;
-
         }
-
       }
 
       /* Bounce To Right */
@@ -111,9 +104,6 @@ body {
     }
 
     div.ant-fullcalendar-date {
-      //background-color: #afdedc;
-      //background-color: #91a8a4;
-      //background: linear-gradient(#91a8a4, #afdedc);
       border-radius: 15px;
       animation: 2s;
     }

@@ -74,7 +74,6 @@
             submitCategory() {
                 axios.post('/api/categories', this.newCategory)
                     .then((response) => {
-                        console.log(response.data);
                         this.categories.push(response.data);
                         document.getElementById("categ-upload").reset();
                     })

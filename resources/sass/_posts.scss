@@ -44,6 +44,12 @@ body {
         }
       }
 
+
+      div.card.post {
+        min-height: 350px;
+
+      }
+
       div.card-header {
         div.fave {
           position: absolute;
@@ -64,25 +70,6 @@ body {
           max-height: 200px;
         }
       }
-
-      //#upload {
-      //    text-align: center;
-      //
-      //    div.el-upload .el-upload--text {
-      //      display: inline-block;
-      //      margin: 0 auto;
-      //      width: 100%;
-      //
-      //      div.el-upload-dragger .el-upload--picture-card {
-      //        img {
-      //          width: 100%;
-      //          object-fit: cover;
-      //        }
-      //      }
-      //
-      //    }
-      //  }
-
 
       div.post-form {
         overflow: hidden;

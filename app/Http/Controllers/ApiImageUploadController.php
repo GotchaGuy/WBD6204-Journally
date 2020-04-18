@@ -12,7 +12,6 @@ class ApiImageUploadController extends Controller
 
             'file' => 'image|mimes:jpeg,png,jpg|max:3072',
         ]);
-//dd($request->all());
         if (!$request->hasFile('file')) {
             return response()->json([
                 'error' => 'No File Uploaded'

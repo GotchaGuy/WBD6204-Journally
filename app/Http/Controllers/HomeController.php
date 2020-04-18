@@ -25,14 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $posts = Post::with('user', 'category')->orderBy('created_at', 'desc')->get();
         $categories = Category::all();
          foreach ($posts as $key => $post) {
             $posts[$key]->body = \Str::limit($post->body, 160);
             $posts[$key]->timestamp = \Carbon\Carbon::parse($post->updated_at)->format('M d Y');
         }
-
         return view('home', compact('posts', 'categories'));
     }
 }

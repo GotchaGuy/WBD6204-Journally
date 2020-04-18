@@ -10,7 +10,6 @@ class ApiCalendarController extends Controller
 {
     public function index()
     {
-
         $events = Event::with('user', 'status')->orderBy('created_at', 'desc')->get();
         $dates = $events->groupBy(function ($item, $key) {
             return \Carbon\Carbon::parse($item->date)->format('Y-m-d');
@@ -18,7 +17,6 @@ class ApiCalendarController extends Controller
             ->sortBy(function ($item, $key) {
                 return $key;
             });
-
         return $dates;
     }
 }

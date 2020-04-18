@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -25,12 +23,10 @@ Route::middleware('auth:api')->post('posts', 'ApiPostsController@store');
 Route::middleware('auth:api')->put('posts/{id}', 'ApiPostsController@update');
 Route::middleware('auth:api')->delete('posts/{id}', 'ApiPostsController@delete');
 
-
 Route::middleware('auth:api')->get('categories', 'ApiCategoriesController@index');
 Route::middleware('auth:api')->post('categories', 'ApiCategoriesController@store');
 Route::middleware('auth:api')->put('categories/{id}', 'ApiCategoriesController@update');
 Route::middleware('auth:api')->delete('categories/{id}', 'ApiCategoriesController@delete');
-
 
 Route::middleware('auth:api')->get('events', 'ApiCalendarController@index');
 Route::middleware('auth:api')->post('events', 'ApiEventsController@store');

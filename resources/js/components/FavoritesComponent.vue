@@ -3,7 +3,7 @@
 
         <div class="badge mb-5 ml-5 bg-warning">Favorites</div>
 
-        <div class="row justify-content-center" v-for="(post, index) in posts">
+        <div class="row justify-content-center" v-for="post in posts">
             <div class="col-md-6 mb-3" v-if="post.favorite">
                 <a :href="'/posts/' + post.id">
                     <div class="card hvr-underline-from-left md-4">

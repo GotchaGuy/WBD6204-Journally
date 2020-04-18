@@ -1,7 +1,6 @@
 <template>
     <div class="container">
-
-        <div class="row justify-content-center" v-for="(post, index) in posts">
+        <div class="row justify-content-center" v-for="post in posts">
             <div class="col-md-6 mb-3">
                 <a :href="'/posts/' + post.id">
                     <div class="card hvr-underline-from-left md-4">
@@ -36,7 +35,6 @@
         mounted() {
             this.posts = JSON.parse(this.dataPosts);
             EventBus.$on('post-submitted', (post) => {
-                console.log(post);
                 this.posts.unshift(post);
             })
         }

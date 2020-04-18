@@ -13,29 +13,6 @@ body .logo-pic {
   width: 30px;
 }
 
-body nav.sticky-top {
-  border-radius: 0 0 15px 15px;
-  min-height: 70px;
-  background: linear-gradient(to right, #c4d7f2, #afdedc, #91a8a4);
-  box-sizing: border-box;
-  padding: 0;
-}
-
-body nav.sticky-top div.within {
-  border-radius: 0 0 15px 15px;
-  min-height: 64px;
-  width: 100%;
-  background-color: #fcf7f8;
-  position: absolute;
-  top: 0;
-}
-
-body nav.sticky-top div.within div.container div#navbarDropdownMenuLink a.nav-link {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-}
-
 body main {
   min-height: 600px;
 }
@@ -51,52 +28,16 @@ body main #upload {
   text-align: center;
 }
 
-body main #upload div.el-upload .el-upload--text {
+body main #upload div.el-upload--text {
   display: inline-block;
+  width: 100%;
+}
+
+body main #upload div.el-upload--text div.el-upload-dragger {
   margin: 0 auto;
-  width: 100%;
 }
 
-body main #upload div.el-upload .el-upload--text div.el-upload-dragger .el-upload--picture-card img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-body div.footer {
-  width: 100%;
-  height: 70px;
-  max-height: 120px;
-  margin-top: 40px;
-  background-color: #c4d7f2;
-}
-
-body div.footer div.within {
-  height: 63px;
-  max-height: 113px;
-  width: 100%;
-  background-color: #fcf7f8;
-  overflow: hidden;
-}
-
-body div.footer div.within nav.navbar {
-  background-color: #fcf7f8;
-}
-
-body div.footer div.within nav.navbar ul {
-  display: inline-block;
-}
-
-body div.footer div.within nav.navbar ul li {
-  display: inline;
-  float: left;
-  padding: 5px;
-}
-
-body div.footer div.within nav.navbar ul li a {
-  text-decoration: none;
-  color: #000;
-  height: 100%;
+body main #upload div.el-upload--text div.el-upload-dragger img {
   width: 100%;
 }
 
@@ -10982,17 +10923,40 @@ a.text-dark:focus {
   }
 }
 
-.dropdown > .dropdown-menu {
+body nav.sticky-top {
+  border-radius: 0 0 15px 15px;
+  min-height: 70px;
+  background: linear-gradient(to right, #c4d7f2, #afdedc, #91a8a4);
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body nav.sticky-top div.within {
+  border-radius: 0 0 15px 15px;
+  min-height: 64px;
+  width: 100%;
+  background-color: #fcf7f8;
+  position: absolute;
+  top: 0;
+}
+
+body nav.sticky-top div.within div.container div#navbarDropdownMenuLink a.nav-link {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body .dropdown > .dropdown-menu {
   top: 200%;
   transition: 0.3s all ease-in-out;
 }
 
-.dropdown:hover > .dropdown-menu {
+body .dropdown:hover > .dropdown-menu {
   display: block;
   top: 100%;
 }
 
-.dropdown > .dropdown-toggle:active {
+body .dropdown > .dropdown-toggle:active {
   pointer-events: none;
 }
 
@@ -11120,6 +11084,43 @@ body .book-shelf:hover .book-shelf__shelf {
   transform-origin: 50% 50%;
 }
 
+body div.footer {
+  width: 100%;
+  height: 70px;
+  max-height: 120px;
+  margin-top: 40px;
+  background-color: #c4d7f2;
+}
+
+body div.footer div.within {
+  height: 63px;
+  max-height: 113px;
+  width: 100%;
+  background-color: #fcf7f8;
+  overflow: hidden;
+}
+
+body div.footer div.within nav.navbar {
+  background-color: #fcf7f8;
+}
+
+body div.footer div.within nav.navbar ul {
+  display: inline-block;
+}
+
+body div.footer div.within nav.navbar ul li {
+  display: inline;
+  float: left;
+  padding: 5px;
+}
+
+body div.footer div.within nav.navbar ul li a {
+  text-decoration: none;
+  color: #333333;
+  height: 100%;
+  width: 100%;
+}
+
 body main div.container {
   /* Underline From Left */
 }
@@ -11165,6 +11166,10 @@ body main div.container a div.card div.card-body {
 
 body main div.container a div.card:hover img {
   height: 158px;
+}
+
+body main div.container div.card.post {
+  min-height: 350px;
 }
 
 body main div.container div.card-header div.fave {
@@ -11331,10 +11336,6 @@ body div.ant-fullcalendar-fullscreen div.ant-fullcalendar-date {
   border-radius: 15px;
   -webkit-animation: 2s;
           animation: 2s;
-}
-
-body div.card.post {
-  min-height: 350px;
 }
 
 body div.card img.error {

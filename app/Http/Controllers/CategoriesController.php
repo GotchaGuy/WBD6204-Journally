@@ -14,19 +14,8 @@ class CategoriesController extends Controller
 
       public function show($id)
     {
-
        $category =  Category::find($id);
 
          return view("category", compact("category"));
     }
-
-//    public function edit($id)
-//    {
-//
-//        $post = Category::find($id);
-//
-//        return view("post-edit");
-//    }
-
-
 }

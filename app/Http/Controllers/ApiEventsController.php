@@ -3,21 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Status;
 use Illuminate\Http\Request;
 
 class ApiEventsController extends Controller
 {
     public function index()
     {
-        $statuses = Status::all();
-
-        return $statuses;
+        return Status::all();
     }
 
     public function store(Request $request)
     {
-//        $request->merge(['user_id' => \Auth::user()->id]);
-//      return  $event = Event::create($request->all());
         return $event = Event::create([
             'content' => $request->input('content'),
             'status_id' => $request->input('status_id'),
@@ -32,16 +29,10 @@ class ApiEventsController extends Controller
             'content' => $request->input('content'),
             'status_id' => $request->input('status.id'),
         ]);
-
-//        return redirect('/calendar');
-
     }
 
     public function delete($id)
     {
         return Event::destroy($id);
-
-//        return redirect('/calendar');
-
     }
 }

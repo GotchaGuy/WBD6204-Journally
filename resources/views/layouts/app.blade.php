@@ -25,14 +25,11 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top pd-0">
         <div class="within">
             <div class="container">
-{{--                <div>--}}
-{{--class="collapse navbar-collapse" id="navbarSupportedContent"--}}
                    @auth
                     <el-nav></el-nav>
                     @endauth
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav float-right">
-{{--                        ml-auto--}}
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -65,7 +62,6 @@
                             </li>
                         @endguest
                     </ul>
-{{--                </div>--}}
             </div>
         </div>
     </nav>

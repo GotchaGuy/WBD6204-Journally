@@ -4,4 +4,5 @@
 
     <event-form></event-form>
     <calendar></calendar>
+
     @endsection

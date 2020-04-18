@@ -1,17 +1,48 @@
+body {
 
+  nav.sticky-top {
+    border-radius: 0 0 15px 15px;
+    min-height: 70px;
+    background: linear-gradient(to right, $columbia, $powder, $cadet);
+    box-sizing: border-box;
+    padding: 0;
 
+    div.within {
+      border-radius: 0 0 15px 15px;
+      min-height: 64px;
+      width: 100%;
+      background-color: $snow;
+      position: absolute;
+      top: 0;
 
+      div.container {
 
+        div#navbarDropdownMenuLink {
+          a.nav-link {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
 
-.dropdown>.dropdown-menu {
-  top: 200%;
-  transition: 0.3s all ease-in-out;
-}
-.dropdown:hover>.dropdown-menu {
-  display: block;
-  top: 100%;
-}
+    }
 
-.dropdown>.dropdown-toggle:active {
+  }
+
+  .dropdown > .dropdown-menu {
+    top: 200%;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+    top: 100%;
+  }
+
+  .dropdown > .dropdown-toggle:active {
     pointer-events: none;
+  }
+
+
 }

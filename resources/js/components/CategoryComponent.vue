@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-
         <div class="badge mb-5 ml-5">{{category.title}}</div>
-
         <div class="row justify-content-center" v-for="(post, index) in posts">
             <div class="col-md-6 mb-3" v-if="post.category.title === category.title">
                 <a :href="'/posts/' + post.id">
@@ -21,9 +19,7 @@
                     </div>
                 </a>
             </div>
-
         </div>
-
     </div>
 </template>
 
@@ -38,12 +34,10 @@
         },
         mounted() {
             this.category = JSON.parse(this.dataCategory);
-            console.log(this.category);
             axios.get('/api/posts')
                 .then((response) => {
                     this.posts = response.data;
                 });
-            console.log(this.posts);
         }
     }
 

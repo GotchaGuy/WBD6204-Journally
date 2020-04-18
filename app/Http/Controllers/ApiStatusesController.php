@@ -10,7 +10,6 @@ class ApiStatusesController extends Controller
     public function index()
     {
         $statuses = Status::all();
-
         return $statuses;
     }
 }

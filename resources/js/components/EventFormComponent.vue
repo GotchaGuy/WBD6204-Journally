@@ -88,7 +88,6 @@
             .v-picker__body theme--light {
                 height: 300px;
             }
-
         }
     }
 
